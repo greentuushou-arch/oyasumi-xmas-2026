@@ -25,12 +25,16 @@
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Jost:wght@500;600;700&display=swap" rel="stylesheet">
 <!-- X'mas CSS（base.css＝商品パーツの土台／xmas2026.css＝2026年デザイン） -->
 <link href="css/base.css" rel="stylesheet">
 <link href="css/xmas2026.css" rel="stylesheet">
+<!-- slick CSS（ランキングの横スライド） -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- slick -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
 <!-- Google tag (gtag.js) -->
 <script>function gtag(){}</script>
@@ -254,7 +258,6 @@
       </div>
     </div>
 
-    <p class="xm-ranking__sub">2位〜10位</p>
     <!-- ＊＊＊＊ランキング２～１０位読み込み（html/ranking-item.html はジェネレーターで作成）＊＊＊＊ -->
     <div id="ranking-item" class="xm-rankgrid"></div>
     <!-- ＊＊＊＊/ランキング２～１０位読み込み＊＊＊＊ -->
@@ -441,7 +444,28 @@
 
 <!-- 商品ファイル読み込み（html/ 内のファイルは「クリスマス特集ジェネレーター」で作成。従来どおり差し替えるだけでOK） -->
 <script>
-$( "#ranking-item" ).load("html/ranking-item.html #ranking-item > *");
+// ランキング2位〜の横スライド（html/ranking-item.html の読み込み完了後に起動）
+function initRankingSlider() {
+  $('#ranking-item .slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 600,
+    infinite: true,
+    prevArrow: '<button type="button" class="xm-slide-arrow xm-slide-arrow--prev" aria-label="前へ"></button>',
+    nextArrow: '<button type="button" class="xm-slide-arrow xm-slide-arrow--next" aria-label="次へ"></button>',
+    responsive: [
+      { breakpoint: 1024, settings: { slidesToShow: 3 } },
+      { breakpoint: 768,  settings: { slidesToShow: 1, centerMode: true, centerPadding: '64px' } }
+    ]
+  });
+  // 画面幅の確定が遅れる端末向けに、表示枚数をもう一度判定する
+  $(window).on('load', function () {
+    $('#ranking-item .slider').slick('getSlick').checkResponsive(false, true);
+  });
+}
+$( "#ranking-item" ).load("html/ranking-item.html #ranking-item > *", initRankingSlider);
 $( "#girl-item" ).load("html/girl-item.html #girl-item > *");
 $( "#boy-item" ).load("html/boy-item.html #boy-item > *");
 $( "#ladys-item" ).load("html/ladys-item.html #ladys-item > *");

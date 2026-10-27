@@ -16,7 +16,7 @@
   --gold-soft: #ead7a4;
   --ink: #2b2221;
   --ink-soft: #5e5150;
-  --maru: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+  --head: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   --sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   --num: "Jost", "Noto Sans JP", sans-serif;
 }
@@ -50,7 +50,7 @@ body.xm-body {
   padding: 48px 20px;
   background: var(--paper);
   text-align: center;
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 700;
 }
 .xm-notice p { font-size: 22px; line-height: 1.8; color: var(--red); margin: 0 0 16px; }
@@ -134,7 +134,7 @@ body.xm-body {
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 40px;
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 900;
 }
 .xm-count__lead { font-size: 28px; }
@@ -185,7 +185,7 @@ body.xm-body {
 }
 .xm-intro__kicker {
   display: inline-block;
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 700;
   font-size: 18px;
   color: var(--green);
@@ -194,7 +194,7 @@ body.xm-body {
   margin-bottom: 28px !important;
 }
 .xm-intro__title {
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 900;
   font-size: 52px;
   line-height: 1.45;
@@ -240,7 +240,7 @@ body.xm-body {
 /* ギフトボックス型メニュー */
 .xm-menu { margin-top: 96px; }
 .xm-menu__head {
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 700;
   font-size: 22px;
   color: var(--green);
@@ -318,7 +318,7 @@ body.xm-body {
   line-height: 1.2;
 }
 .xm-box__label {
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 900;
   font-size: 18px;
   line-height: 1.45;
@@ -392,7 +392,7 @@ body.xm-body {
 
 .xm-head > div { flex: 1 1 auto; min-width: 0; }
 .xm-head__title {
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 900;
   font-size: 46px;
   line-height: 1.3;
@@ -413,7 +413,7 @@ body.xm-body {
   min-width: 260px;
   padding: 18px 32px;
   border-radius: 999px;
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 700;
   font-size: 18px;
   text-decoration: none;
@@ -436,7 +436,7 @@ body.xm-body {
 --------------------------------------------------------- */
 .xm-gift1__label {
   display: inline-block;
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 700;
   font-size: 16px;
   color: var(--gold-soft);
@@ -486,7 +486,7 @@ body.xm-body {
   border-top: 2px dashed #e3d6c0;
 }
 .xm-gift1__detail-title {
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 900;
   font-size: 22px;
   color: var(--green);
@@ -502,7 +502,7 @@ body.xm-body {
 }
 .xm-gift1__detail dl > div:last-child { border-bottom: 0; }
 .xm-gift1__detail dt {
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 700;
   font-size: 15px;
   color: var(--red);
@@ -516,7 +516,7 @@ body.xm-body {
 /* 今治タオルの「ドーナツ」をCSSで */
 
 .xm-gift1__first {
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 900;
   font-size: 22px;
   color: var(--red);
@@ -531,7 +531,7 @@ body.xm-body {
   margin: 0 .06em;
 }
 .xm-gift1__title {
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 900;
   font-size: 34px;
   line-height: 1.35;
@@ -544,7 +544,7 @@ body.xm-body {
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 900;
   font-size: 22px;
   color: var(--green);
@@ -568,7 +568,7 @@ body.xm-body {
 .xm-gift2__photo { margin: 0; }
 .xm-gift2__photo img { display: block; border-radius: 6px; }
 .xm-gift2__title {
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 900;
   font-size: 42px;
   line-height: 1.4;
@@ -591,7 +591,7 @@ body.xm-body {
   border-top: 1px solid rgba(255,255,255,.25);
 }
 .xm-ansin__title {
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 900;
   font-size: 30px;
   color: #fff;
@@ -609,7 +609,7 @@ body.xm-body {
 .xm-ansin__list svg { flex: 0 0 52px; width: 52px; height: 52px; color: var(--gold-soft); }
 .xm-ansin__list b {
   display: block;
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 900;
   font-size: 20px;
   margin-bottom: 8px;
@@ -626,21 +626,17 @@ body.xm-body {
   gap: 16px;
   margin-top: 28px;
 }
-.xm-ranking__sub {
-  font-family: var(--maru);
-  font-weight: 900;
-  font-size: 28px;
-  color: var(--gold-soft);
-  margin-bottom: 30px !important;
-}
-/* 2〜10位：スライダーをやめて全部見えるグリッドに */
-.xm-rankgrid .slider {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 56px 28px;
-  padding-top: 30px;
-}
-.xm-rankgrid .ranking_img_box { margin: 0; position: relative; }
+/* 2位〜：横スライド（slick）。カードの高さはそろえる */
+.xm-rankgrid { position: relative; margin: 0 -11px; }
+.xm-rankgrid .slider { padding: 0 0 8px; }
+.xm-rankgrid .slick-track { display: flex; }
+.xm-rankgrid .slick-slide { height: auto; }
+/* base.css の旧スライダー指定（左右70%縮小・画像20vw・SPで矢印非表示）を打ち消す */
+.xm-rankgrid .slider .slick-slide { transform: none; transition: none; }
+.xm-rankgrid .slider img { width: 100%; }
+.xm-rankgrid .slick-arrow { display: block; }
+.xm-rankgrid .slick-slide > div { height: 100%; }
+.xm-rankgrid .ranking_img_box { position: relative; height: 100%; margin: 0; padding: 24px 11px 0; }
 .xm-rankgrid .ranking_img_box > .col { height: 100%; }
 .xm-rankgrid .card {
   width: auto;
@@ -653,13 +649,13 @@ body.xm-body {
 .xm-rankgrid .card > a { display: block; }
 .xm-rankgrid .btn i { display: none; }
 .xm-rankgrid .card-img-top { width: 100%; border-radius: 0; aspect-ratio: 1; object-fit: contain; background: #fff; }
-.xm-rankgrid .card-body { display: flex; flex-direction: column; padding: 18px 20px 22px; }
-.xm-rankgrid .card-text { font-size: 14px; line-height: 1.75; color: var(--ink-soft); margin-bottom: 14px; }
+.xm-rankgrid .card-body { display: flex; flex-direction: column; padding: 16px 16px 18px; }
+.xm-rankgrid .card-text { font-size: 13px; line-height: 1.75; color: var(--ink-soft); margin-bottom: 14px; }
 .xm-rankgrid .product-name {
   display: inline-block;
-  font-family: var(--maru);
-  font-weight: 900 !important;
-  font-size: 18px;
+  font-family: var(--head);
+  font-weight: 700 !important;
+  font-size: 16px;
   line-height: 1.45;
   color: var(--ink);
   margin-bottom: 4px;
@@ -669,7 +665,7 @@ body.xm-body {
   margin: 0 0 8px;
   text-align: left;
   font-family: var(--num);
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
   color: var(--red);
 }
@@ -678,27 +674,39 @@ body.xm-body {
   border-radius: 999px;
   border: 1.5px solid var(--green);
   color: var(--green);
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 13px;
   padding: 8px 10px;
 }
 .xm-rankgrid .btn:hover { background: var(--green); color: #fff; }
-.xm-rankgrid .ranking-icon { top: -22px; left: -14px; }
-.xm-rankgrid .ranking-icon img { width: 78px; border-radius: 3px; }
+.xm-rankgrid .ranking-icon { top: 6px; left: 2px; }
+.xm-rankgrid .ranking-icon img { width: 66px; border-radius: 3px; }
 
-/* PC（1024px〜）は4列。端数の最後の1枚は中央に置く（8分割グリッドで2マスずつ） */
-@media screen and (min-width: 1024px) {
-  .xm-rankgrid .slider { grid-template-columns: repeat(8, 1fr); gap: 48px 22px; }
-  .xm-rankgrid .ranking_img_box { grid-column: span 2; }
-  .xm-rankgrid .ranking_img_box:last-child:nth-child(4n+1) { grid-column: 4 / span 2; }
-  .xm-rankgrid .card-body { padding: 16px 16px 18px; }
-  .xm-rankgrid .product-name { font-size: 16px; }
-  .xm-rankgrid .card-text { font-size: 13px; }
-  .xm-rankgrid .price { font-size: 22px; }
-  .xm-rankgrid .btn { font-size: 13px; }
-  .xm-rankgrid .ranking-icon { top: -18px; left: -12px; }
-  .xm-rankgrid .ranking-icon img { width: 66px; }
+/* 矢印：白丸に赤の山形 */
+.xm-slide-arrow {
+  position: absolute;
+  top: 38%;
+  z-index: 5;
+  width: 48px; height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+.xm-slide-arrow::before {
+  content: "";
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 12px; height: 12px;
+  border-top: 3px solid var(--red);
+  border-right: 3px solid var(--red);
+}
+.xm-slide-arrow--prev { left: -18px; }
+.xm-slide-arrow--prev::before { margin: -6px 0 0 -3px; transform: rotate(-135deg); }
+.xm-slide-arrow--next { right: -18px; }
+.xm-slide-arrow--next::before { margin: -6px 0 0 -9px; transform: rotate(45deg); }
+.xm-slide-arrow:hover { background: var(--cream); }
 }
 
 /* ---------------------------------------------------------
@@ -718,7 +726,7 @@ body.xm-body {
   border: 2px solid rgba(255,255,255,.7);
   border-radius: 999px;
   color: #fff;
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 700;
   font-size: 17px;
   text-decoration: none;
@@ -795,7 +803,7 @@ body.xm-body {
 }
 .xm-items .item_img_box a:hover img { transform: scale(1.04); }
 .xm-items .item_name {
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 900;
   font-size: 19px;
   line-height: 1.5;
@@ -820,7 +828,7 @@ body.xm-body {
   width: 100%;
   padding: 12px 10px;
   border-radius: 999px;
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 700;
   font-size: 15px;
 }
@@ -842,7 +850,7 @@ body.xm-body {
 }
 .xm-special__naire img { border-radius: 6px; }
 .xm-special__msg {
-  font-family: var(--maru);
+  font-family: var(--head);
   font-weight: 900;
   font-size: 36px;
   line-height: 1.5;
@@ -861,7 +869,7 @@ body.xm-body {
   color: var(--ink) !important;
   border-radius: 6px;
   text-decoration: none;
-  font-family: var(--maru);
+  font-family: var(--head);
   transition: transform .2s ease;
 }
 .xm-faq:hover { transform: translateY(-2px); }
@@ -898,11 +906,11 @@ body.xm-body {
 }
 .xm-footer__contact > div { background: var(--cream); border-radius: 6px; padding: 26px 20px; }
 .xm-footer__contact p { font-size: 14px; color: var(--ink-soft); line-height: 1.7; }
-.xm-footer__label { font-family: var(--maru); font-weight: 700; color: var(--red) !important; margin-bottom: 2px !important; }
+.xm-footer__label { font-family: var(--head); font-weight: 700; color: var(--red) !important; margin-bottom: 2px !important; }
 .xm-footer__tel,
 .xm-footer__mail { font-family: var(--num); font-weight: 600; font-size: 26px !important; color: var(--green) !important; margin-bottom: 6px !important; }
 .xm-footer__mail { font-size: 19px !important; }
-.xm-footer__thanks { font-family: var(--maru); font-weight: 700; font-size: 18px; line-height: 1.8; margin-bottom: 30px !important; }
+.xm-footer__thanks { font-family: var(--head); font-weight: 700; font-size: 18px; line-height: 1.8; margin-bottom: 30px !important; }
 .xm-footer__copy { font-size: 12px; color: var(--ink-soft); margin-top: 48px !important; }
 
 /* ページトップ */
@@ -952,7 +960,7 @@ body.xm-body {
 @media screen and (max-width: 767px) {
   .xm-wrap { padding: 0 18px; }
 
-  .xm-notice p { font-size: 17px; }
+  .xm-notice p { font-size: 15px; }
 
   .xm-count { padding: 4px 0 44px; }
   .xm-count__inner {
@@ -1024,17 +1032,18 @@ body.xm-body {
 
   .xm-no1 { margin-bottom: 64px; }
   .xm-no1__btns { flex-direction: column; gap: 12px; margin-top: 20px; }
-  .xm-ranking__sub { font-size: 22px; }
-  .xm-rankgrid .slider { grid-template-columns: 1fr 1fr; gap: 40px 12px; padding-top: 20px; }
-  .xm-rankgrid .ranking_img_box:first-child { grid-column: 1 / -1; }
   .xm-rankgrid .card-body { padding: 12px 12px 14px; }
   .xm-rankgrid .product-name { font-size: 15px; }
   .xm-rankgrid .card-text { font-size: 12px; line-height: 1.7; }
   .xm-rankgrid .price { font-size: 19px; }
   .xm-rankgrid .btn { font-size: 12px; padding: 7px 4px; }
-  .xm-rankgrid .ranking-icon { top: -16px; left: -6px; }
-  .xm-rankgrid .ranking-icon img { width: 52px; }
-  .xm-rankgrid .ranking_img_box:first-child .ranking-icon img { width: 64px; }
+  .xm-rankgrid { margin: 0 -18px; }
+  .xm-rankgrid .ranking_img_box { padding: 22px 7px 0; }
+  .xm-rankgrid .ranking-icon { top: 4px; left: 0; }
+  .xm-rankgrid .ranking-icon img { width: 56px; }
+  .xm-slide-arrow { width: 40px; height: 40px; top: 34%; }
+  .xm-slide-arrow--prev { left: 6px; }
+  .xm-slide-arrow--next { right: 6px; }
 
   .xm-who { margin: -8px 0 44px; gap: 8px; }
   .xm-who a { padding: 9px 16px; font-size: 14px; }
