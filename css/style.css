@@ -1,0 +1,714 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+a:link {
+color:#333;
+text-decoration:none;	
+}
+a:visited {
+	color:#333;
+	text-decoration:none;	
+}
+a:hover {
+color:#666;
+text-decoration:none;
+    filter: brightness(1.06);
+    transition: all 0.3s ease 0s;
+}
+a:active {
+color:#333;
+text-decoration:none;	
+}
+
+/*　フローティングヘッダーによるアンカーリンクのズレを調整 */ 
+a.anchor{
+    display: block;
+   margin-top:0;
+   padding-top:0;
+    position: relative;
+    z-index: -9999; /* 他要素の上に重ならないよう調整 */
+}
+
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+max-width: 1000px;
+}
+
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+#shop-header{
+background-color: #fff;
+    padding: 0;
+}
+
+
+
+.content-header{
+background-color: #fff;
+}
+.content-1{
+background-color: #a80000;
+/*padding: 120px 0 0px 0;*/
+}
+.content-2{
+background-color: #fff;
+background-image: url(../img/bg/vintage-concrete2.png);
+}
+.content-3{
+background-color: #fff;
+background-image: url(../img/bg/vintage-concrete2.png);
+padding: 30px 0 0px 0;
+}
+.content-4{
+background-color: #fff;
+background-image: url(../img/bg/vintage-concrete2.png);
+padding-bottom: 20px;
+}
+.content-5{
+background-color: #fff;
+background-image: url(../img/bg/back-pair.png);
+padding: 10px 0;
+}
+.content-6{
+background-color: #FFF;
+margin-top:5rem;
+}
+.content-7{
+background-color: #FFF;
+}
+.content-8{
+background-color: #FFCC00;
+margin-top:5rem;
+}
+.content-9{
+background-color: #fff;
+}
+.content-10{
+background-color: #fff;
+}
+.content-11{
+background-color: #FFF;
+}
+.content-12{
+background-color: #fff;
+background-image: url(../img/bg/vintage-concrete2.png);
+}
+.content-13{
+background-color: #FFF;
+margin-top:5rem;
+}
+.content-14{
+background-color: #FFF;
+}
+.content-15{
+background-color: #FFF;
+	margin:2% auto 12%;
+}
+.nav-item a{
+	font-size:0.8em;
+	color:#666;
+}
+.max-150 {
+	width:100%;
+	max-width:150px;
+	margin-left: -15px;
+}
+.max-300 {
+	width:100%;
+	max-width:300px;
+	margin-left: -15px;
+}
+.max-1000 {
+	width:100%;
+	max-width:1000px;
+}
+.m-button{
+width: 200px;
+background:#A8080B;
+color: #fff;
+text-align: center;
+}
+.m-button2{
+width: 200px;
+background:#9b9b9b;
+color: #fff;
+text-align: center;
+}
+.sp-button{
+width: 120px;
+background:#A8080B;
+color: #fff;
+text-align: center;
+}
+.sp-button2{
+width: 120px;
+background:#9b9b9b;
+color: #fff;
+text-align: center;
+}
+.m-pc-bn{
+font-size: 15px;
+border: 1px #000 solid;
+padding: 5px;
+}
+.m-sp-bn{
+font-size: 13px;
+border: 1px #000 solid;
+padding: 5px;
+}
+.m-sp-bn1{
+font-size: 13px;
+}
+
+#yuryo-furoshiki{
+    background:#dbc095;
+    border-radius:10px 10px 0 0;
+    font-size:1.3em;
+    font-weight:bold;
+}
+
+
+
+/* ------------------------------------------------------------ */
+/* 【ページTOPへボタン】------------------------------------------------ */
+/* ------------------------------------------------------------ */
+#forPagetop{position: fixed;bottom:5px;right: 5px;}
+#forPagetop a{position: relative; display: block;text-decoration: none; background:#493a21;  border-radius: 50%;width: 50px;height: 50px;opacity: 0.5;}
+#forPagetop a:hover{opacity: 0.7; }
+#forPagetop a::before{font-family: "Font Awesome 5 Pro"; content: '\f102'; font-weight: 900; font-size: 25px; color:#ffffff; position: absolute; width: 25px; height: 25px; top: 0; bottom: 9px; right: 0; left: 0; margin: auto; text-align: center;}
+
+
+
+
+
+
+/* ======================== 商品紹介　共通 ======================== */
+
+
+
+
+/* ------------------------------------------------------------ */
+/*------ 掲載商品部分　(ECDBツールと連動)---------*/
+/* ------------------------------------------------------------ */
+
+
+/* 商材　画像の高さ調整　*/
+.card{
+    align-items: flex-start;
+    /*display: block;*/
+    filter: drop-shadow(4px 4px 3px rgba(0,0,0,0.3));
+    border-radius: 0 0 20px 20px;
+    }   
+
+#pair .card{
+    background: rgb(219,213,172);
+    }   
+#osusume .card{
+	background-color:#fdf7ef;
+	background-image: repeating-linear-gradient(-60deg,#f3ebe0, #f3ebe0 2px,transparent 0, transparent 7px);
+	border:#ddc29a 2px solid;
+    height: 100%;
+    }   
+
+
+
+/*------ 商品おすすめコメント---------*/       
+
+.price{
+text-align: right;
+	font-family: "Arial Black", Gadget, sans-serif;
+	color: #cc0e00;
+	font-size: 1.2em;
+	font-weight: bold;
+margin: 10px;
+}
+.price small{
+    font-size: 0.75em;
+}
+
+
+.delivery-function{
+    display: none; /* あす楽アイコン デフォルトでは非表示に */
+}
+
+.asurakuItem .delivery-function{
+    display: inline-block!important; /* あす楽アイコン あす楽商品では表示させる */
+    background-color: #BF070A;
+    text-align: center;
+    border: #BF070A solid 1px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+	font-weight: normal;
+    color: #fff;
+    padding: 2px 5px;
+    margin: 5px;
+}
+.delivery-function:before{
+    font-family: "Font Awesome 5 Pro";
+    content: "\f48b";
+  font-weight: 300;
+  padding-right : 0.3em;
+}
+
+
+/* ▼▼▼▼ 直前期 あす楽以外の商品を非表示にする ▼▼▼▼ */
+.item-box{
+    display: none;
+}
+.asurakuItem{
+    display: block!important;
+}
+/* △△△△ 直前期 あす楽以外の商品を非表示にする △△△△ */
+
+
+
+
+/* ======================== 商品紹介　【ランキング商品・ペア商品】 ======================== */
+
+.rankItemBox,
+.pairItemBox{
+	display: block;
+	filter: drop-shadow(4px 4px 3px rgba(0,0,0,0.3));
+	/*box-shadow: 10px 10px 10px rgba(0,0,0,0.4);*/
+}
+
+.rankItemBox .comment{
+	color: #333333;
+	background-color: rgba(255,255,255,1);
+	padding: 1% 3%;
+    margin-bottom: 3%;
+	border-radius: 0 0 15px 15px;
+}
+
+.pairItemBox p.comment{
+	color: #333333;
+	background-color: rgba(219,213,173,1);
+	padding: 1% 3% 3%;
+	border-radius: 0 0 15px 15px;
+}
+
+
+
+
+/* ======================== 商品紹介　【その他快眠グッズ】 ======================== */
+
+.otherItemBox {
+	display: block;
+}
+.otherItemBox .itemSpec{
+	padding-right: 0;
+}
+
+.otherItemBox p.card-text{
+	color: #333333;
+	background: #f3ebe0;
+	border-radius: 8px;
+	padding: 5px 8px;
+	margin:10px 3px;
+	position: relative;
+	left: -10px;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	box-shadow: 0px 0px 5px 0px #a7a7a7;
+}
+
+.otherItemBox p.card-text::before{ /*フキダシ風*/
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -15px;
+  top: 20px;
+  border-right: 15px solid #f3ebe0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+
+/*======================== 完売表記 ======================== */
+
+/* 共通 */
+.zaiko1 .soldOut{
+	display:none;
+}
+
+.zaiko0 .soldOut{
+	display:block;
+	position:absolute;
+	background-color:rgba(13,28,48,0.5);
+	color:#fff;
+	font-size:1.6rem;
+	text-align:center;
+	text-shadow:0 0 5px #3a3328;
+	box-sizing:border-box;
+	padding:30% 0;
+}
+
+/* ランキング */
+.rankItemBox .soldOut{ 
+	top:3%;
+	width:100%;
+	height:97%;
+	border-radius: 0 0 15px 15px;
+}
+
+/* ペア */
+.pairItemBox .soldOut{ 
+	top:0;
+	width:100%;
+	height:100%;
+	border-radius: 0 0 15px 15px;
+}
+
+/* 店長おすすめ */
+.osusumeItemBox .soldOut{ 
+	/*top:0;
+	left:3%;*/
+	width:94.5%;
+	height:100%;
+}
+
+
+
+/*======================== まだまだ選べない方はコチラ ======================== */
+.madamada{
+	position: relative;
+}
+
+.madamada #select{
+	list-style: none;
+	display: flex;
+	position: absolute;
+	top: 50%;
+	left: 40%;
+}
+
+.madamada #select li{
+	margin-right: 10%;
+}
+
+.madamada #select li img{
+	max-width: 80%;
+}
+
+
+/*======================== 特典 ======================== */
+.benefitAttention{ 
+	color: #c2383a;
+	font-size: 1.6rem;
+	width: 98%;
+	margin: 3% auto;
+	/*border: dotted 2px #c2383a;*/
+	background: #f3ebe0;
+	box-shadow: 0px 0px 5px 0px #a7a7a7;
+	padding: 3%;
+	border-radius: 15px;
+}
+
+
+/*======================== 遅れてごめんね ========================*/
+.lead{
+    /*background:#735b33;*/
+    background: -webkit-repeating-linear-gradient(-45deg,#927a51 0,#927a51 10px,#8a7146 10px,#8a7146 20px);
+    background: -o-repeating-linear-gradient(-45deg,#927a51 0,#927a51 10px,#8a7146 10px,#8a7146 20px);
+    background: repeating-linear-gradient(-45deg,#927a51 0,#927a51 10px,#8a7146 10px,#8a7146 20px);
+    border-radius:10px;
+    color:#fff;
+    font-size:1.4rem;
+    line-height:1.5;
+    padding:10px;
+    width:90%;
+    margin:5% auto;
+    text-align:center;
+}
+.lead strong{
+    font-weight: bold;
+    /*display: block;*/
+    font-size: 2rem;
+}
+
+/*======================== CP終了 ========================*/
+.info{
+    background:#735b33;
+    border-radius:10px;
+    color:#fff;
+    font-size:2rem;
+    line-height:1.5;
+    padding:10px;
+    width:90%;
+    margin:50px auto;
+    text-align:center;
+}
+
+
+/*======================== よくあるご質問へリンクボタン ========================*/
+
+#faq-btn {
+    text-align: center;
+}
+
+#faq-btn a{
+    display:inline-block !important;
+	font-size: 1.5em;
+    margin:5px;
+    padding:2% 2.5em 2% 2%;
+    background:rgb(255 216 104);
+    border-radius:20px;
+    box-shadow:2px 2px 2px rgba(153,153,153,0.5);
+    color:#542c1c;
+    /*text-align:left;*/
+	position: relative;
+}
+#faq-btn a:after{
+    position:absolute;
+    top:25%;
+    right:0.5em;
+	font-family: "Font Awesome 5 Pro";
+	content: "\f330";
+	font-size: 1.5em;
+        font-weight: 600;
+}
+
+
+#faq-btn b{
+	font-size: 1.5em;
+	display: inline;
+}
+
+
+
+
+
+/*======================== よくあるご質問（faq.html） ========================*/
+#xmas_faq h2{
+	color: #ffffff;
+    font-size: 2.5rem;
+}
+
+#xmas_faq h3{
+    background: rgba(255,216,104,1.00);
+	padding: 10px;
+	color: #542c1c;
+    border-radius: 5px;
+}
+
+#xmas_faq .accordion-item h4 button:before {
+    font-family: "Font Awesome 5 Pro";
+    content: '\f059';
+    font-weight: 900;
+    color: #1B85B5;
+    padding-right: 0.5em;
+    font-size: 1.5em;
+}
+
+#xmas_faq .accordion-item .accordion-body {
+    padding-left: 3em;
+    position: relative;
+}
+
+#xmas_faq .accordion-item .accordion-body:before {
+    display: inline-block;
+    font-family: "Font Awesome 5 Pro";
+    content: '\f3e5';
+    font-weight: 900;
+    color: #C50307;
+    /* padding-right: 0.5em; */
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    position: absolute;
+    left: 1em;
+    font-size: 1.2em;
+}
+
+#xmas_faq .accordion-item .accordion-button{
+    color: #434344;
+    background-color: #f7f7f7;
+    text-align: left;
+}
+#xmas_faq .accordion-item .accordion-button:not(.collapsed){
+    color: #434344;
+    background-color: #f3fcff;
+}
+
+#xmas_faq .accordion-item a{
+    color: #0d6efd;
+    text-decoration: underline;
+}
+#xmas_faq .accordion-item a:after{
+    font-family: "Font Awesome 5 Pro";
+    content: '\f08e';
+    font-weight: 900;
+    padding-right: 0.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*===================================================================*/
+/* SP向けのCSS指定 */
+/*===================================================================*/
+
+@media (max-width: 767px) {
+    body {
+        padding-top: 105px;
+    }
+    
+    #spHeader {
+	background-image: url(https://shopping.geocities.jp/makura/img/bg-town.png);
+	background-color: #2965AD;
+	background-position: bottom center;
+	background-repeat: repeat-x;
+	margin: 0;
+	padding: 15px 0 30px 0;
+	width: 100%;
+    }
+    #spHeader img {
+        vertical-align:bottom;
+        max-width: 90%;
+    }	    
+
+    /*　フローティングヘッダーによるアンカーリンクのズレを調整 */ 
+    a.anchor{
+        display: block;
+       margin-top:-130px;
+       padding-top:130px;
+    }
+
+    .row>* {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    	
+    .item-card-imgLeft .card{
+    flex-direction: row!important;
+    border-radius: 0;
+    }
+    /*.item-card-imgLeft .card-body{
+    width: 300%;
+    }*/
+    .item-card-imgLeft .card-img-top{
+    /*padding: 1rem 1rem 1rem 0.2rem;*/
+        padding: 0.5rem;
+        width: 40%!important;
+    }
+    .item-card-imgLeft p.card-text{
+    font-size: 0.9rem;
+    }
+    .item-card-imgLeft a.btn.btn-outline-dark {
+    font-size: 0.9rem;
+    }
+    .item-card-imgLeft .card-body {
+    padding: 1rem 0.2rem;
+    }
+
+    
+    .content-4 .container,
+    .content-4 .col-12{
+    padding: 0;
+    }
+
+    .content-10 .col-12:nth-child(odd){
+        margin-bottom: 1.5rem;
+    }
+
+    .content-11 .col-lg-6:nth-child(odd){
+        margin-bottom: 1.5rem;
+    }
+    .otherItemBox .itemSpec{
+    	padding-left: 0;
+        flex: 2 0 0;
+    }
+    .otherItemBox p.card-text{
+        left: 0;
+        box-shadow: 0 0 0 0;
+	}
+
+    
+    .osusumeItemBox .soldOut {
+	width:100%;
+	height:94%;
+	}
+
+	.madamada #select{
+		position: absolute;
+		top: 50%;
+		left: 30%;
+	}
+
+	.madamada #select li{
+		margin-right: 0;
+	}
+
+	.madamada #select li img{
+		max-width: 60%;
+		/*height: 80%;*/
+	}
+
+    .benefitAttention {
+	font-size: 1rem;
+	}
+
+    .lead {
+        width:100%;
+        font-size:14px;
+        /*text-align: left;*/
+        }
+    .lead strong{
+        font-size: 1rem;
+        /*text-align:center;*/
+        }
+
+    .info {   
+        font-size:13px;
+        }
+
+    #faq-btn a{
+        font-size: 1.3em;
+        padding:2% 2.5em 2% 3%;
+    }
+    #faq-btn a:after{
+        position:absolute;
+        top:20%;
+        right:0.2em;
+    }
+    #faq-btn b{
+        font-size: 1.1em;
+        display: block;
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+
+

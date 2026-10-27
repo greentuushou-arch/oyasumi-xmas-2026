@@ -1,0 +1,449 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/* Comment ---------------------------------------------------------
+2016.9.1　全体共通・パーツ・素材専用CSS
+          320px幅基準
+--------------------------------------------------------------------
+*/
+
+.forPC{display:none;}
+.forSP{display:block;}
+
+
+/*
+============================================================
+*	全体
+============================================================
+*/
+*{margin:0;padding:0;}
+html{font-size:62.5%;height:auto;}
+body{background:#990002;color:#990002;font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;font-size:1.4rem;line-height:1;letter-spacing:0.08em;text-align:center;width:100%;height:auto;-webkit-text-size-adjust:100%;word-wrap:break-word;}
+li{list-style:none;}
+a{color:#990002;text-decoration:none;-webkit-transition: 0.2s ease-in-out;-moz-transition: 0.2s ease-in-out;-o-transition: 0.2s ease-in-out;transition: 0.2s ease-in-out;}
+a:hover{-webkit-transition: 0.2s ease-in-out;-moz-transition: 0.2s ease-in-out;-o-transition: 0.2s ease-in-out;transition: 0.2s ease-in-out;}
+img{border:0;vertical-align:bottom;width:100%;}
+button{background-image:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/icon-empty.png");font-family:"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック",sans-serif;cursor:pointer;line-height:1.3;}
+table{border-collapse:collapse;border-spacing:0;}
+
+
+/*
+============================================================
+*	ヘッダー共通
+============================================================
+*/
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/bg-header.png") repeat-x center top / contain;width:100%;max-height:60px;}
+header:before{display:inline-block;content:"";padding-top:14.2%;}
+header ul{position:absolute;top:50%;margin:-21px 3% 0;display:flex;justify-content:space-between;align-items:center;width:94%;}
+header li:nth-of-type(1){display:table;text-align:left;width:60%;}
+header li:nth-of-type(1) span{display:table-cell;vertical-align:middle;}
+header li:nth-of-type(1) span:nth-of-type(1){width:25px;}
+header li:nth-of-type(1) span:nth-of-type(2){padding:0 0 0 7px;}
+header li:nth-of-type(2){text-align:right;}
+header li:nth-of-type(3){text-align:right;width:30px;}
+header li a.logoR{display:inline-block;background:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/logo-rakuten.png") no-repeat center center / 95% auto;color:transparent;width:25px;height:25px;overflow:hidden;text-indent:-500em;}
+header li a.logo{width:calc(100% - 30px);}
+header li a.logo img{max-height:30px;}
+header li a button.greenBtn{font-size:1.2rem;padding:5px 7px;}
+header li a.iconMenu{display:inline-block;background:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/icon-menu.png") no-repeat center center / contain;color:transparent;width:30px;height:30px;margin:2px 0 0 5px;overflow:hidden;text-indent:-500em;}
+
+/*
+============================================================
+*	フッター共通
+============================================================
+*/
+footer{position:relative;background:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/bg-footer.png") repeat-x center bottom / contain;width:100%;margin:110px 0 0 0;}
+footer:before{display:inline-block;content:"";padding-top:26.3%;}
+footer p.copy{position:absolute;bottom:10px;font-size:1rem;width:100%;}
+footer p.forShop{position:absolute;top:-95%;left:2%;width:25%;}
+footer p.pagetop{position:absolute;top:-50%;right:2%;width:25%;}
+
+
+/*
+============================================================
+*	メイン共通
+============================================================
+*/
+main{position:relative;display:inline-block;width:100%;}
+main > section{max-width:1000px;}
+button.greenBtn{background:#4eaf22 url('../images/icon-empty.png') no-repeat;border:none;border-radius:11px;box-shadow:0 3px 3px 0 rgba(255, 255, 255, 0.2) inset, 0 -3px 3px 0 rgba(0, 0, 0, 0.2) inset, 0 3px 3px 0 rgba(0, 0, 0, 0.2);cursor:pointer;color:#fff;font-size:1.4rem;font-weight:normal;width:100%;padding:15px 0;}
+
+/* ----- 注意書き ----- */
+.attention{text-align:left;width:90%;margin:0 auto;text-align:left;line-height:1.3;}
+.attention li{position:relative;padding:0 0 1em 1.2em;}
+.attention li:last-of-type{padding-bottom:0;}
+.attention li:before{position:absolute;left:0;content:"※";}
+
+/* ----- 【パーツ】エントリー実況中継 ----- */
+.partsLive{width:100%;margin:0;padding:10px 0 20px;overflow:hidden;}
+.partsLive ul{position:relative;width:100%;}
+.partsLive li{position:absolute;width:calc(100% / 3 - 2%);margin:0 1%;}
+.partsLive li a{display:block;background:#fff;box-shadow:0 3px 3px 0 rgba(0,0,0,0.2);padding:5px;}
+.partsLive li p{font-size:1.2rem;font-weight:bold;line-height:1.3;}
+.partsLive li p time{display:block;color:#755253;font-weight:normal;}
+.partsLive li.liveItem img{margin-bottom:5px!important;}
+
+/* ----- 【パーツ】注文件数 ----- */
+.orders li{font-weight:bold;margin:0 10% 20px;}
+.orders li:first-of-type{background:#ba0000;border-radius:20px;color:#fff;font-size:1.8rem;padding:1em 0 0.5em;}
+.orders li:last-of-type{background:#e8e8e8;border-radius:20px;font-size:1.6rem;padding:1em 0 0.5em;}
+.orders li > div{position:relative;display:inline-block;}
+.orders li > div:after{position:absolute;bottom:0.3em;right:-1em;content:"件";}
+.orders li:first-of-type > div{width:70%;margin-top:0.8em;}
+.orders li:last-of-type > div{width:40%;margin-top:0.5em;}
+.orders li > div > div{position:relative;width:100%;padding-top:46.7%;}
+.orders li > div > div iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
+
+.erabu h2{margin:0 7%;}
+
+/* ----- 【選ぶ】スノーマン ----- */
+#erabuList01{margin-bottom:50px;}
+#erabuList01 p{margin:0 3%;}
+#erabuList01 li{margin:0 0 15px;}
+#erabuList01 li a button{position:relative;box-shadow:0 3px 3px 0 rgba(0,0,0,0.2);border:none;border-radius:15px;box-shadow:0 2px 2px 0 rgba(255,255,255,0.2) inset,0 -2px 2px 0 rgba(0,0,0,0.2) inset,0 2px 2px 0 rgba(0,0,0,0.2);color:#fff;font-size:2rem;width:94%;padding:20px 3% 20px 22%;text-align:left;text-shadow:0 2px 1px rgba(0,0,0,0.3);}
+#erabuList01 li a button small{display:block;font-size:1.2rem;line-height:1.5;margin:0 0 5px;}
+#erabuList01 li.forWoman a button{background-color:#ff7b8e;}
+#erabuList01 li.forMama a button{background-color:#ffa800;}
+#erabuList01 li.forMan a button{background-color:#5ad0b8;}
+#erabuList01 li.forPapa a button{background-color:#40a2e0;}
+#erabuList01 li.forChild a button{background-color:#f6cb00;}
+#erabuList01 li.forFriend a button{background-color:#966fde;}
+#erabuList01 li a button:before{position:absolute;top:0;left:3%;background-repeat:no-repeat;background-position:center center;background-size:80% auto;content:"";width:18%;height:100%;}
+#erabuList01 li.forWoman a button:before{background-image:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/icon-snow01.png");}
+#erabuList01 li.forMama a button:before{background-image:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/icon-snow02.png");}
+#erabuList01 li.forMan a button:before{background-image:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/icon-snow03.png");}
+#erabuList01 li.forPapa a button:before{background-image:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/icon-snow04.png");}
+#erabuList01 li.forChild a button:before{background-image:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/icon-snow05.png");}
+#erabuList01 li.forFriend a button:before{background-image:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/icon-snow06.png");}
+
+/* ----- 【選ぶ】その他 ----- */
+#erabuList02 nav{position:relative;top:-3em;}
+#erabuList02 ul.forSP{display:inline-block;margin:0 2%;}
+#erabuList02 li{/*float:left;margin:0 1%;*/display:inline-block;width:calc(100% / 3 - 2%);}
+#erabuList02 li a button{border:none;}
+
+
+
+.futonyasan #erabuList02 nav li.forRanking,
+.futonyasan #erabuList02 nav li.forPoint,
+.oyasumi #erabuList02 nav li.forPoint{display:none!important;}
+
+
+
+
+/*
+============================================================
+*	アイコン関連
+============================================================
+*/
+/* ----- 参加方法 ----- */
+.icon.entry{display:inline-block;border-radius:5px;color:#fff;margin:0 5px 5px 0;padding:5px;line-height:1.3;}
+.icon.entry.a{background:#2961a1;}
+.icon.entry.b{background:#ef5b21;}
+.icon.entry.c{background:#336745;}
+.icon.entry.d{background:#ec708c;}
+.icon.entry.e{background:#7aaf8c;}
+.icon.entry.f{background:#f4a9ba;}
+
+/* ----- 特典・ラッピング ----- */
+.icon.tokuten,
+.icon.wrapping{display:inline-block;background-repeat:no-repeat;background-position:center top;background-size:auto 80%;font-size:1.4rem;font-weight:bold;width:50%;text-align:center;}
+.icon.tokuten:before,
+.icon.wrapping:before{display:block;content:"";padding-top:100%;}
+.icon.tokuten.true{background-image:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/icon-tokuten-t.jpg");}
+.icon.tokuten.false{background-image:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/icon-tokuten-f.jpg");}
+/*.icon.wrapping.true{background-image:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/icon-wrapping-t.jpg");}*/
+.icon.wrapping.false{background-image:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/icon-wrapping-f.jpg");}
+.icon.wrapping.default{background-image:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/icon-wrapping-default.jpg");}
+.icon.wrapping.xmas{background-image:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/icon-wrapping-xmas.jpg");}
+
+
+
+/*
+============================================================
+*	ドロワーメニュー
+============================================================
+*/
+#siteNav{display:none;background:rgba(153,0,2,0.9);padding:0 0 50px;}
+#siteNav section{width:100%;margin:0;}
+#siteNav .head{width:94%;padding:10px 3%;}
+#siteNav .head ul{display:table;width:100%;}
+#siteNav .head li{display:table-cell;vertical-align:middle;}
+#siteNav .head li:first-of-type{text-align:left;width:80%;}
+#siteNav .head li a.logo{display:inline-block;background-repeat:no-repeat;background-position:center center;background-size:contain;color:transparent;width:100%;}
+#siteNav .head li a.logo:before{display:block;content:"";padding-top:17.3%;}
+#siteNav .head li:last-of-type{text-align:right;}
+#siteNav .head li a.close{display:inline-block;background:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/icon-close.png") no-repeat center center / contain;color:transparent;width:40px;height:40px;margin:2px 0 0 5px;overflow:hidden;text-indent:-500em;}
+#siteNav .foot li a.close{display:inline-block;background:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/icon-close.png") no-repeat center center / contain;color:transparent;width:80px;height:80px;margin:100px 0 0 5px;overflow:hidden;text-indent:-500em;}
+
+#siteNav h2{margin-bottom:15px;}
+#siteNav nav{top:0;}
+#siteNav #erabuList02{margin-top:50px;}
+
+.oyasumi #siteNav .head li a.logo{background-image:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/logo-campaign-oyasumi.png");}
+.futonyasan #siteNav .head li a.logo{background-image:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/logo-campaign-futonyasan.png");}
+
+
+
+/*
+============================================================
+*	トップページ
+============================================================
+*/
+#xmasTop #frontCover{position:relative;margin:50px 3% 0;}
+#xmasTop #frontCover h1{padding:3% 0 5%;}
+#xmasTop #frontCover .lines{position:relative;display:block;background:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/bg-balloon01.png") no-repeat center bottom / 100% 100%;width:100%;}
+#xmasTop #frontCover .lines:before{display:block;content:"";padding-top:90%;}
+#xmasTop #frontCover .lines:after{position:absolute;left:26%;bottom:-56%;display:block;content:"";background:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/bg-balloon02.png") no-repeat center center / contain;width:7%;height:110%;}
+#xmasTop #frontCover .lines p{position:absolute;top:10%;display:none;width:84%;padding:0 8%;line-height:1.3;text-align:left;word-break:break-all;}
+#xmasTop #frontCover .lines p.lines1{display:block;}
+#xmasTop #frontCover .lines p b{display:inline-block;font-size:1.6rem;margin-bottom:0.5em;}
+#xmasTop #frontCover .lines p a{display:inline-block;margin:1em 0 0.5em;width:100%;}
+#xmasTop #frontCover .lines p a button.greenBtn{white-space:nowrap;}
+#xmasTop #frontCover .lines p span{display:block;margin-top:0.5em;text-align:right;}
+#xmasTop #frontCover .lines p span button.change{position:relative;display:inline-block;background:#fff url('../images/icon-empty.png') no-repeat;border:1px solid #e8e8e8;border-radius:8px;box-shadow:0 -3px 3px 0 rgba(0, 0, 0, 0.2) inset;cursor:pointer;color:#990002;font-size:1.6rem;font-weight:normal;width:auto;padding:7px 3% 7px 20px;}
+#xmasTop #frontCover .lines p span button.change:before{position:absolute;top:50%;left:10px;margin-top:-4px;content:"";border-color:transparent transparent transparent #990002;border-style:solid;border-width:4px 0 4px 5px;}
+#xmasTop #frontCover .santa{position:relative;top:-3vh;z-index:2;width:40%;}
+#xmasTop #frontCover .tree{position:absolute;bottom:4vh;right:0;z-index:-1;width:35%;}
+#xmasTop #frontCover .forPlan01{position:absolute;left:0;bottom:23%;width:30%;}
+#xmasTop #frontCover .forPlan01 button{position:relative;z-index:5;background:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/frontcover03.png") no-repeat center center / contain;border:none;color:transparent;width:100%;height:auto;overflow:hidden;text-indent:-500em;}
+#xmasTop #frontCover .forPlan01 button:before{display:inline-block;content:"";padding-top:54.7%;}
+
+#xmasTop .plan{position:relative;}
+#xmasTop .plan h2{position:relative;z-index:5;background-repeat:no-repeat;background-position:center center;background-size:contain;}
+#xmasTop .plan .wrapBox{position:relative;top:-50px;z-index:1;background:#fff;border-radius:3px;width:94%;margin:0 3%;padding:50px 0 30px;}
+#xmasTop .plan .wrapBox img{width:94%;margin:0 3% 25px;}
+#xmasTop .plan .wrapBox .partsLive h3{position:relative;text-align:left;}
+#xmasTop .plan .wrapBox .partsLive h3:after{position:absolute;top:0;right:0;display:block;content:"";background:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/bg-santa.png") no-repeat center center / contain;width:20%;padding-top:29.6%;}
+#xmasTop .plan .wrapBox .partsLive h3 img{width:77%;margin-bottom:10px;}
+
+#xmasTop #plan01{padding-top:60px;}
+
+#xmasTop #plan02 dl{background:#f6f6f6;border:1px solid #e8e8e8;border-radius:5px;text-align:center;margin-top:5px;width:95%;}
+#xmasTop #plan02 dl dt,#plan02 dl dd{display:block;padding:5px;}
+#xmasTop #plan02 dl dt{font-weight:bold;padding-bottom:0;}
+
+#xmasTop #plan03 #list{margin-top:25px;}
+#xmasTop #plan03 #list h2 img{margin-bottom:0;}
+#xmasTop #plan03 #list .box table{border:1px solid #990002;margin-bottom:25px;}
+#xmasTop #plan03 button{width:94%;margin:20px 3% 0;padding:15px 0;}
+
+.futonyasan #plan03,
+.windowbird #plan03,
+.annique #plan03,
+.oyasumi-baby #plan03{display:none;}
+
+#xmasTop .description{position:relative;margin:0 0 50px;}
+
+#xmasTop #description04{color:#fff;margin:0;}
+#xmasTop #description04 h2{margin:0 3%;}
+#xmasTop #description04 .wrapBox01{position:absolute;top:15%;left:3%;width:75%;}
+#xmasTop #description04 .wrapBox01 p button{padding:15px 0;}
+#xmasTop #description04 .wrapBox02{position:relative;padding-top:50px;}
+#xmasTop #description04 .wrapBox02 ul{margin:0 3%;}
+#xmasTop #description04 .wrapBox02 ul li{text-align:left;}
+#xmasTop #description04 .wrapBox02 ul li b{display:block;font-size:1.8rem;}
+#xmasTop #description04 .wrapBox02 ul li img{margin:8px 0 50px;}
+#xmasTop #description04 .wrapBox02 ul li:last-of-type img{width:60%;}
+#xmasTop #description04 .wrapBox02 p:first-of-type{position:absolute;top:53%;right:1%;width:50%;}
+#xmasTop #description04 .wrapBox02 p:last-of-type{position:absolute;bottom:3%;right:5%;width:30%;}
+#xmasTop #description04 .wrapBox02 p:last-of-type span{display:block;font-size:1.2rem;margin:0 0 15px;line-height:1.3;}
+
+#xmasTop #description05:after{display:block;color:#fff;content:"●●●●●●●●●●●●●●●●●";font-size:1.2rem;letter-spacing:0.3em;margin-top:50px;}
+
+
+/* ----- モーダルウィンドウ（納期）※アクセス時出現 ----- */
+#layer_board_area section{padding:10px 3%;}
+#layer_board_area section h2{margin-bottom:70px;}
+#layer_board_area section .wrap{position:relative;}
+#layer_board_area section .wrap:first-of-type{margin-bottom:120px;}
+#layer_board_area section .wrap:last-of-type{margin-bottom:10px;}
+#layer_board_area section .wrap p{position:absolute;top:-65px;right:22%;color:#fff;font-size:1.3rem;line-height:1.3;width:16em;}
+#layer_board_area section .wrap img{position:absolute;top:-90px;right:5%;width:18%;}
+#layer_board_area section .wrap div{background:#fff;border-radius:10px;}
+#layer_board_area section .wrap div dt{background:#e8e8e8;font-size:1.8rem;font-weight:bold;padding:10px 5%;}
+#layer_board_area section .wrap div dt:first-of-type{border-radius:10px 10px 0 0;}
+#layer_board_area section .wrap div dd{padding:1em 5%;line-height:1.3;}
+#layer_board_area section .wrap div dd:nth-of-type(2n){padding:0 5% 50px;}
+
+#layer_board_area section .wrap:last-of-type div{border-radius:10px;padding-bottom:40px;}
+#layer_board_area section .wrap div h3{font-size:2.2rem;padding:30px 5%;text-align:center;}
+#layer_board_area section .wrap div h3:before,
+#layer_board_area section .wrap div h3:after{content:"※";}
+
+.layer_board{top:0;left:0!important;width:100%;height:100%;margin:0!important;}
+.layer_board > div{position:relative;top:50%;left:0;width:100%;max-width:670px;margin:-10em auto 0;}
+.layer_board > div ul button{position:relative;display:inline-block;background:#fff url('../images/icon-empty.png') no-repeat;border:1px solid #990002;border-radius:8px;box-shadow:0 -3px 3px 0 rgba(0, 0, 0, 0.2) inset;cursor:pointer;color:#990002;font-size:1.4rem;font-weight:normal;width:auto;margin:10px 0 0;padding:7px 3% 7px 20px;}
+.layer_board > div ul button:before{position:absolute;top:50%;left:10px;margin-top:-4px;content:"";border-color:transparent transparent transparent #990002;border-style:solid;border-width:4px 0 4px 5px;}
+#xmasTop #frontCover .santa{position:relative;top:-3vh;z-index:2;width:40%;}
+
+/* ----- モーダルウィンドウ（納期）※クリック時出現 ----- */
+#nouki{padding:10px 3%;}
+#nouki h2{margin-bottom:70px;}
+#nouki .wrap{position:relative;}
+#nouki .wrap:first-of-type{margin-bottom:120px;}
+#nouki .wrap:last-of-type{margin-bottom:50px;}
+#nouki .wrap p{position:absolute;top:-65px;right:22%;color:#fff;font-size:1.3rem;line-height:1.3;width:16em;}
+#nouki .wrap img{position:absolute;top:-90px;right:5%;width:18%;}
+#nouki .wrap div{background:#fff;border-radius:10px;}
+#nouki .wrap div dt{background:#e8e8e8;font-size:1.8rem;font-weight:bold;padding:10px 5%;}
+#nouki .wrap div dt:first-of-type{border-radius:10px 10px 0 0;}
+#nouki.wrap div dd{padding:1em 5%;line-height:1.3;}
+#nouki .wrap div dd:nth-of-type(2n){padding:0 5% 50px;}
+
+#nouki .wrap:last-of-type div{border-radius:10px;padding-bottom:20px;}
+#nouki .wrap div h3{font-size:1.8rem;padding:20px 5%;text-align:center;}
+#nouki .wrap div h3:before,
+#nouki .wrap div h3:after{content:"※";}
+
+#nouki .wrap div ul button{position:relative;display:inline-block;background:#fff url('../images/icon-empty.png') no-repeat;border:1px solid #990002;border-radius:8px;box-shadow:0 -3px 3px 0 rgba(0, 0, 0, 0.2) inset;cursor:pointer;color:#990002;font-size:1.4rem;font-weight:normal;width:auto;margin:10px 0 0;padding:7px 3% 7px 20px;}
+#nouki .wrap div ul button:before{position:absolute;top:50%;left:10px;margin-top:-4px;content:"";border-color:transparent transparent transparent #990002;border-style:solid;border-width:4px 0 4px 5px;}
+
+
+/* ----- CLOSEボタン ----- */
+.btn_close{text-align:center;}
+.btn_close a{display:inline-block;}
+.btn_close a button{background-color:transparent;background-image:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/icon-close.png");background-repeat:no-repeat;background-position:center center;background-size:contain;border:none;color:transparent;width:40px;height:50px;overflow:hidden;}
+
+
+/* ----- モーダルウィンドウ（４つの参加方法） ----- */
+#entryType{padding:10px 3%;}
+#entryType h2{margin-bottom:70px;}
+#entryType .wrap{position:relative;}
+#entryType .wrap:first-of-type{margin-bottom:120px;}
+#entryType .wrap:last-of-type{margin-bottom:50px;}
+#entryType .wrap p{position:absolute;top:-50px;right:25%;color:#fff;font-size:1.2rem;line-height:1.3;width:11em;}
+#entryType .wrap img{position:absolute;top:-90px;right:5%;width:20%;}
+#entryType .wrap div{background:#fff;border-radius:10px;}
+#entryType .wrap div dt{background:#e8e8e8;font-size:1.8rem;font-weight:bold;padding:10px 5%;}
+#entryType .wrap div dt:first-of-type{border-radius:10px 10px 0 0;}
+#entryType .wrap div dd{padding:1em 5%;line-height:1.3;}
+#entryType .wrap div dd:nth-of-type(2n){padding:0 5% 50px;}
+
+#entryType .wrap:last-of-type div{border-radius:10px;padding-bottom:20px;}
+#entryType .wrap div h3{font-size:1.8rem;padding:20px 5%;text-align:center;}
+#entryType .wrap div h3:before,
+#entryType .wrap div h3:after{content:"※";}
+
+/* ----- CLOSEボタン ----- */
+.popup-modal-dismiss{text-align:center;}
+.popup-modal-dismiss a{display:inline-block;}
+.popup-modal-dismiss a button{background-color:transparent;background-image:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/icon-close.png");background-repeat:no-repeat;background-position:center center;background-size:contain;border:none;color:transparent;width:40px;height:50px;overflow:hidden;}
+.mfp-close{display:none!important;}
+
+
+/*
+============================================================
+*	キャンペーン企画その４
+============================================================
+*/
+#prize #frontCover{margin-top:80px;}
+#prize #frontCover .wrapBox{position:relative;background:#fff;margin:0 3%;padding-bottom:10px;}
+#prize #frontCover .wrapBox h1{margin:0 3% 0 5%;}
+#prize #frontCover .wrapBox h1 img:first-of-type{position:relative;top:-18px;}
+#prize #frontCover .wrapBox h1 + p{position:relative;right:-3%;}
+#prize #frontCover .wrapBox .partsLive{padding:0 0 30px;}
+#prize #frontCover .wrapBox .partsLive h3{font-size:1.6rem;margin:30px 0 10px;}
+
+/* ----- 特典概要 ----- */
+#prize #detail > .wrapBox{position:relative;background:#fff;margin:0 3% 50px;}
+#prize #detail > .wrapBox h2{background:#493a21;color:#fff;font-size:2rem;padding:15px 0;}
+#prize #detail > .wrapBox .wrap{padding:1em 5% 2em;text-align:left;}
+#prize #detail > .wrapBox .wrap h3{border-left:4px solid #113f20;color:#113f20;font-size:1.8rem;margin:1em 0 0.5em;padding:3px 0 0 5px;}
+#prize #detail > .wrapBox .wrap h3:first-of-type{margin-top:0;}
+#prize #detail > .wrapBox .wrap p{margin-bottom:1em;line-height:1.3;letter-spacing:0.08em;}
+#prize #detail > .wrapBox .wrap p:last-of-type{margin-bottom:0;}
+#prize #detail > .wrapBox .wrap p b{display:inline-block;font-size:1.8rem;letter-spacing:-0.02em;text-align:center;}
+#prize #detail > .wrapBox .wrap .attention{width:100%;margin-bottom:2em;}
+
+/* ----- 当選者一覧 ----- */
+#list .box table{position:relative;top:-5px;background:#fff;width:94%;margin:0 auto;padding-bottom:10px;}
+#list .box table tr{display:block;border-bottom:1px dashed #990002;}
+#list .box table tr:last-of-type{border-bottom:none;}
+#list .box table tr:nth-of-type(2n){background:#fffaf6;}
+#list .box table td{display:block;line-height:1.3;letter-spacing:0.08em;}
+#list .box table td.date{padding:1em 3% 0;}
+#list .box table td.date time{font-size:2.6rem;font-weight:bold;}
+#list .box table td.item{display:inline-block;width:94%;padding:0.5em 3%;text-align:left;}
+#list .box table td.item img{float:left;box-shadow:0 3px 3px 0 rgba(0,0,0,0.2);margin-right:10px;width:6em;}
+#list .box table td.item br{display:none;}
+#list .box table td.item b{display:block;font-size:1.8rem;}
+#list .box table td.item b:after{content:"さま";font-size:1.4rem;font-weight:normal;}
+#list .box table td.no{padding:0 3% 1em;}
+
+#list .box table tr.mada td.item{display:none;}
+
+#list + p{margin:20px 3% 0;}
+
+/* ----- モーダルウィンドウ（当選者さまへ） ----- */
+#prize #forPrize  h2{margin:0 3% 110px;}
+#prize #forPrize .wrap{position:relative;background:#fff;border-radius:10px;margin:0 3% 50px;padding:1.5em 5% 0;}
+#prize #forPrize .wrap > p:nth-of-type(1){position:absolute;top:-90px;left:23%;color:#fff;font-size:1.2rem;line-height:1.3;width:7em;}
+#prize #forPrize .wrap > img:nth-of-type(1){position:absolute;top:-90px;left:2%;width:20%;}
+#prize #forPrize .wrap > p:nth-of-type(2){position:absolute;top:-56px;right:15%;color:#fff;font-size:1.2rem;line-height:1.3;width:7em;}
+#prize #forPrize .wrap > img:nth-of-type(2){position:absolute;top:-90px;right:2%;width:20%;}
+#prize #forPrize .wrap h3{border-left:4px solid #113f20;color:#113f20;font-size:1.8rem;margin:1em 0 0.5em;padding:3px 0 0 5px;}
+#prize #forPrize .wrap h3:first-of-type{margin-top:0;}
+#prize #forPrize .wrap dl{background:#fff8dc;border-radius:10px;padding:10px;line-height:1.3;letter-spacing:0.08em;}
+#prize #forPrize .wrap dt{font-weight:bold;}
+#prize #forPrize .wrap dd{font-weight:bold;}
+#prize #forPrize .wrap dd:first-of-type{margin-bottom:1em;}
+#prize #forPrize .wrap p{margin-bottom:1em;line-height:1.3;letter-spacing:0.08em;}
+#prize #forPrize .wrap p b{font-size:1.6rem;}
+#prize #forPrize .wrap .attention{padding-bottom:2em;width:auto;}
+
+
+/*
+============================================================
+*	○○に贈る！プレゼント
+============================================================
+*/
+#erabu{background:#990002 url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/bg-body.png") repeat-x center 40px / 100% auto;}
+#erabu #frontCover{position:relative;display:inline-block;width:94%;margin:50px 3%;}
+#erabu #frontCover h1{color:#fff;font-size:2.4rem;padding-bottom:5px;text-shadow:0 2px 1px rgba(0,0,0,0.3);line-height:1.3;}
+#erabu #frontCover .lines{position:relative;float:right;background:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/bg-balloon01.png") no-repeat center bottom / 100% 100%;width:65%;}
+#erabu #frontCover .lines:after{position:absolute;left:-5%;bottom:-2%;display:block;content:"";background:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/bg-balloon02.png") no-repeat center center / contain;width:10%;height:100%;transform:rotate(140deg);}
+#erabu #frontCover .lines p{font-size:1.6rem;padding:15px 5% 15px 7%;line-height:1.3;text-align:left;word-break:break-all;}
+#erabu #frontCover .lines p b{display:inline-block;font-size:1.6rem;margin-bottom:0.5em;}
+#erabu #frontCover .lines p a{display:inline-block;margin:1em 0 0.5em;width:100%;}
+#erabu #frontCover .lines p a button.greenBtn{white-space:nowrap;}
+#erabu #frontCover .lines p span{display:block;margin-top:0.5em;text-align:right;}
+#erabu #frontCover .snow{position:absolute;top:37%;left:-3%;z-index:-1;width:35%;transform:rotate(-8deg);}
+#erabu.forMama #frontCover .snow{left:2%;}
+
+
+#erabu article{position:relative;border-radius:15px;box-shadow:0 2px 2px 0 rgba(255, 255, 255, 0.2) inset, 0 -2px 2px 0 rgba(0, 0, 0, 0.2) inset, 0 2px 2px 0 rgba(0, 0, 0, 0.2);margin:0 3% 35px;padding:0 0 10px;overflow:hidden;}
+#erabu.forWoman article{background:#ffd7dd;}
+#erabu.forMama article{background:#ffe5b2;}
+#erabu.forMan article{background:#cdf1ea;}
+#erabu.forPapa article{background:#c5e3f6;}
+#erabu.forChild article{background:#fcefb2;}
+#erabu.forFriend article{background:#dfd4f5;}
+#erabu article h2{font-size:1.6rem;padding:0 3% 10px;line-height:1.3;}
+#erabu article .wrapPhoto{ display: none; /*position:absolute;bottom:0;right:0;width:75%;*/}
+#erabu article .itemDetail{ position: relative; text-align: left; display: flex; align-items:flex-start;}
+#erabu article .itemSpec{ width:80%;}
+
+#erabu article .itemPrice{display: inline-block; float: right; margin:1% 5% 1% auto; font-size: 1.5em; font-weight: bold;}
+#erabu article .itemAsuraku{display: inline-block; float: right; margin:0.5em 1em 0 auto; width:5em;}
+
+#erabu article .lines{position:relative; /*position: absolute;*/ left:1%; top:0; background:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/bg-balloon01.png") no-repeat center bottom / 100% 100%;margin:-15px 10px 0 5px;}
+/*#erabu article .lines:after{position:absolute;left:40%;bottom:-47%;display:block;content:"";background:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/bg-balloon02.png") no-repeat center center / contain;width:12%;height:84%;transform:scaleX(-1);}*/
+#erabu article .lines:after{position:absolute;left:-5%;bottom:-2%;display:block;content:"";background:url("https://www.rakuten.ne.jp/gold/futonyasan/html/event/xmas/images/bg-balloon02.png") no-repeat center center / contain;width:10%;height:100%;transform:rotate(140deg);}
+#erabu article .lines p{font-size:1.3rem;padding:10px 9%;line-height:1.3;text-align:left;word-break:break-all;}
+#erabu article .lines p b{display:block;font-size:1.2em;margin-bottom:0.3em;}
+#erabu article .lines p a{display:inline-block;margin:1em 0 0.5em;width:100%;}
+#erabu article .lines p a button.greenBtn{white-space:nowrap;}
+#erabu article .snow{/*position:absolute;*/ position: relative; top:-20%; bottom:10%;left:2%; margin: -3% 0 0 0; width:20%;transform:rotate(-8deg);}
+#erabu.forMama article .snow{bottom:5%;left:4%;width:19%;}
+#erabu article a > p:last-of-type{position:relative;z-index:1;margin:1% 5%;}
+
+#erabu #itemList:after{display:block;color:#fff;content:"●●●●●●●●●●●●●●●●●";font-size:1.2rem;letter-spacing:0.3em;margin:40px 0;}
+
+#erabu.forWoman main li.forWoman,
+#erabu.forMama main li.forMama,
+#erabu.forMan main li.forMan,
+#erabu.forPapa main li.forPapa,
+#erabu.forChild main li.forChild,
+#erabu.forFriend main li.forFriend{display:none;}
+
+

@@ -1,0 +1,75 @@
+#pageslide {
+    /* These styles MUST be included. Do not change. */
+    display: none;
+    position:absolute;
+    top: 0;
+    height:auto !important;
+    z-index: 1000;
+    width: 100%;
+}
+a.CloseBtn{
+	font-size:18px;
+	float: right;
+	color: #fff;
+	vertical-align: top;
+	width: 24px;
+	height: 24px;
+	line-height: 1;
+	text-align: center;
+	text-decoration:none;
+	border-radius: 5px;
+	display: inline-block;
+}
+#MenuCont {
+	display:none;
+	font-size:14px;
+	overflow: hidden;
+	text-align:left;
+}
+#MenuCont h2{
+	font-size:1.2em;
+	overflow:hidden;
+	padding:10px 10px 10px;
+	margin: 0;
+	font-weight: bold;
+	background: #2d6870;
+	border-bottom: 1px solid #43868e;
+}
+.MenuUL ul{
+	margin: 10px 10px;
+	padding: 5px 10px;
+	list-style: none;
+	background: #2d6870;
+	border-radius: 5px;
+	
+}
+.MenuUL ul li p.MenuTitle{
+	color: #dccda0;
+	font-weight: bold;
+	padding: 0;
+	font-size: 12px;
+}
+.MenuUL ul li:not(:first-child){
+	border-top:1px solid #3c7880;
+}
+.MenuUL ul li{
+	margin: 0;
+	padding: 0;
+}
+.MenuUL ul li a{
+	display:block;
+	padding:10px 15px 10px 0px;
+	margin:0;
+	color: #fff;
+	background: url(../images/sp/icon-menu-arrow.png) right center no-repeat;
+	text-decoration:none;
+}
+.ArrowPink{
+	background:url(../images/common/icon_arrow_green_r.png)  left bottom no-repeat;
+	background-size:6px 11px;
+	width:6px;
+	height:11px;
+	display:block;
+	float:right;
+	margin:3px 0 0 0;
+}

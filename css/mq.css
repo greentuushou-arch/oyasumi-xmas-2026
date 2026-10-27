@@ -1,0 +1,233 @@
+﻿@charset "utf-8";
+/*
+============================================================
+*	メディアクエリ
+============================================================
+*/
+
+
+
+/* 幅360px以上700px以下
+--------------------------------------------------------*/
+@media screen and (min-width:360px) {
+#xmasTop #frontCover .lines:before{padding-top:80%;}
+#xmasTop #description04 .wrapBox01{width:70%;}
+#xmasTop #description05:after{letter-spacing:0.6em;}
+button.greenBtn{font-size:1.6rem;}
+#erabuList01 li a button{font-size:2.2rem;}
+#erabuList01 li a button small{font-size:1.35rem;}
+#erabu #frontCover h1{font-size:2.6rem;padding:15px 0;}
+#erabu article h2{font-size:1.8rem;line-height:1.3;}
+#erabu article .snow{bottom:9%;}
+#erabu.forMama article .snow{bottom:4%;}
+#erabu #bnrAsuraku { width: 95%; border:#fff 4px double; margin: 0 auto 5em;}
+#prize #detail > .wrapBox .wrap p b br{display:none;}
+#prize #detail > .wrapBox .wrap p b br.forPC{display:block;}
+
+}
+
+/* 幅600px以上
+--------------------------------------------------------*/
+@media screen and (min-width:600px) {
+body{font-size:1.8rem;}
+header li a.logo img{width:auto;}
+#xmasTop #frontCover h1{padding:8% 0 6%;}
+#xmasTop #frontCover .lines:before{padding-top:70%;}
+#xmasTop #frontCover .lines p{font-size:1.8rem;width:80%;padding:0 10%;}
+#xmasTop #frontCover .lines p b{font-size:2.4rem;}
+#erabu #frontCover h1{font-size:3rem;padding:20px 0;}
+#erabu #frontCover h2{font-size:2rem;}
+#erabu article .lines p{font-size:1.6rem;padding:15px 10%;}
+#erabu article .lines{width:95%;margin:-15px 10px 3% 20px;}
+#erabu article .snow{bottom:4%;}
+button.greenBtn{font-size:2.2rem;}
+#erabuList01 li a button{font-size:3rem;}
+#erabuList01 li a button small{font-size:2.2rem;}
+#list .box table td.date{padding-bottom:0.5em;}
+#list .box table td.item{text-align:center;}
+#list .box table td.item img{float:none;margin:0 0 0.5em;width:10em;}
+#list .box table td.item a br{display:block;}
+footer{margin:200px 0 0;}
+footer p.copy{bottom:15px;font-size:1.2rem;}
+#siteNav .head li a.logo{width:80%;}
+.erabu h2{margin:25px 15%!important;}
+#layer_board_area section .wrap div h3{font-size:2.4rem;}
+.layer_board > div ul button{font-size:1.6rem;}
+#layer_board_area section .wrap:last-of-type{margin-bottom:50px;}
+#layer_board_area section .wrap p{right:18%;}
+#layer_board_area section .wrap img{position:absolute;top:-90px;right:5%;width:13%;}
+#nouki{max-width:630px;margin:0 auto;}
+#nouki .wrap div h3{font-size:2.4rem;padding:30px 5%;}
+#nouki .wrap div ul button{font-size:1.6rem;}
+#nouki .wrap:last-of-type{margin-bottom:50px;}
+#nouki .wrap:last-of-type div{padding-bottom:40px;}
+#nouki .wrap p{right:18%;}
+#nouki .wrap img{position:absolute;top:-90px;right:5%;width:13%;}
+#entryType h2{margin-bottom:100px;}
+#entryType .wrap p{top:-70px;font-size:1.6rem;}
+#entryType .wrap img{top:-120px;}
+.icon.tokuten,
+.icon.wrapping{font-size:1.8rem;}
+#entryType .wrap:first-of-type{margin-bottom:170px;}
+#prize #forPrize h2{margin-bottom:130px;}
+#prize #forPrize .wrap > img:nth-of-type(1){top:-110px;width:15%;}
+#prize #forPrize .wrap > img:nth-of-type(2){top:-105px;width:15%;}
+#prize #forPrize .wrap > p:nth-of-type(1){left:18%;font-size:1.6rem;}
+#prize #forPrize .wrap > p:nth-of-type(2){font-size:1.6rem;}
+#prize #detail > .wrapBox .wrap p b{font-size:2.4rem;}
+#erabu #frontCover{margin:50px 8% 100px;width:84%;}
+#erabu #frontCover h1{font-size:5rem;padding:50px 0 80px;}
+#erabu #frontCover .snow{top:50%;left:3%;width:30%;}
+#erabu #frontCover .lines{width:50%;right:8%;}
+#erabu #frontCover .lines p{font-size:1.8rem;padding:25px 5% 25px 7%;}
+/*#erabu #frontCover h1{font-size:7rem;padding:50px 0 100px;}
+#erabu #frontCover .snow{left:19%;width:20%;}
+#erabu.forMama #frontCover .snow{top:43%;left:20%;width:17%;}
+#erabu #frontCover .lines{top:-50px;width:45%;}
+#erabu #frontCover .lines p{font-size:2.4rem;padding:30px 5% 30px 7%;}*/
+#erabu article{padding-bottom:15px;}
+#erabu article h2{font-size:2.4rem;padding:5px 3% 15px;}
+#erabu article .snow{bottom:6%;}
+#erabu.forMama #frontCover .snow{left:7%;width:25%;}
+#erabu.forMama article .snow{width:17%;}
+#xmasTop #description04 .wrapBox02 p:last-of-type span{font-size:1.6rem;}
+#xmasTop #description04 .wrapBox02 ul li b,
+#entryType .wrap div dt,
+#entryType .wrap div h3,
+.orders li:first-of-type,
+#prize #detail > .wrapBox .wrap h3,
+#prize #forPrize .wrap h3{font-size:2.2rem;}
+.orders li:last-of-type{font-size:1.8rem;}
+.partsLive li p{font-size:1.6rem;}
+#prize #frontCover .wrapBox .partsLive h3,
+#prize #detail > .wrapBox h2{font-size:2.4rem;}
+}
+
+
+
+/* 幅700px以上
+--------------------------------------------------------*/
+@media screen and (min-width:700px) {
+
+header{height:70px;max-height:70px;}
+header ul{margin-top:-25px;}
+header li a.logoR{width:30px;height:30px;margin-right:7px;}
+header li a.logo{width:290px;height:30px;}
+header li a.iconMenu{width:35px;height:35px;}
+button.greenBtn{font-size:2.4rem;}
+#xmasTop #frontCover{margin:100px 3% 0;}
+#xmasTop #frontCover h1{margin-bottom:30px;padding:30px 0;}
+#xmasTop #frontCover .lines:before{padding-top:60%;}
+#xmasTop #frontCover .lines p{font-size:2rem;width:80%;padding:0 10%;}
+#xmasTop #frontCover .lines p b{font-size:2.8rem;}
+.partsLive{padding:30px 0 50px;}
+.orders li{margin:0 15% 30px;}
+.orders li:first-of-type{font-size:2.8rem;}
+.orders li:last-of-type{font-size:2.4rem;}
+#erabuList01 li a button{font-size:3.4rem;padding:30px 3% 30px 25%;}
+#erabuList01 li a button:before{left:4%;background-size:70% auto;}
+#erabuList01 li a button small{font-size:2.2rem;}
+#xmasTop #description04 .wrapBox02 ul li b{font-size:2rem;}
+#xmasTop #description05:after,
+#erabu #itemList:after{content:"●●●●●●●●●●●●●●●●●●●●●●●●";letter-spacing:0.7em;}
+footer{margin:210px 0 0;}
+#siteNav .head li a.logo{width:50%;}
+#siteNav h2{margin-bottom:45px;}
+#siteNav #erabuList02{margin-top:100px;}
+#entryType .wrap div dt{font-size:2.4rem;padding:20px 5%;}
+#entryType .wrap div dd{font-size:2rem;}
+#entryType h2{margin-bottom:120px;}
+#entryType .wrap:first-of-type{margin-bottom:210px;}
+#entryType .wrap p{top:-80px;}
+#entryType .wrap img{top:-170px;}
+.icon.tokuten, .icon.wrapping{font-size:2.4rem;}
+#prize #frontCover{margin-top:100px;}
+#prize #frontCover .wrapBox .partsLive h3{font-size:2.8rem;margin:50px 0 20px;}
+.partsLive li p{font-size:1.8rem;}
+#prize #frontCover .wrapBox .partsLive{padding-bottom:50px;}
+#prize #detail > .wrapBox{margin-bottom:70px;}
+#prize #detail > .wrapBox h2{font-size:2.8rem;padding:20px 0;}
+#prize #detail > .wrapBox .wrap h3{font-size:2.4rem;}
+#prize #detail > .wrapBox .wrap p{font-size:2rem;}
+#prize #detail > .wrapBox .wrap p b{font-size:3rem;width:100%;}
+#prize #detail > .wrapBox .wrap p b br{display:none;}
+#prize #detail > .wrapBox .wrap p b br.forPC{display:inline;}
+#prize #forPrize h2{margin-bottom:160px;}
+#prize #forPrize .wrap{padding-top:2.5em;}
+#prize #forPrize .wrap > img:nth-of-type(1){top:-140px;width:15%;}
+#prize #forPrize .wrap > img:nth-of-type(2){top:-135px;width:15%;}
+#prize #forPrize .wrap > p:nth-of-type(1){top:-120px;}
+#prize #forPrize .wrap > p:nth-of-type(2){top:-87px;}
+#prize #forPrize .wrap p{font-size:2rem;}
+#prize #forPrize .wrap h3{font-size:2.4rem;margin-top:1.5em;}
+#prize #forPrize .wrap dl{font-size:2rem;padding:30px;}
+#list .box table td.date time{font-size:3rem;}
+#list .box table tr.lucky{display:inline-block;width:100%;}
+#list .box table tr.lucky td.item{float:left;width:calc(60% - 6%);padding:0 3% 1em;text-align:left;}
+#list .box table tr.lucky td.item a br{display:block;}
+#list .box table tr.lucky td.item a img{float:left;margin:0 10px 0 0;width:6em;}
+#list .box table tr.lucky td.item b{font-size:2.4rem;}
+#list .box table tr.lucky td.no{float:right;width:calc(40% - 6%);padding:1em 3%;}
+footer{margin-top:230px;}
+#erabu.forMama #frontCover .snow{top:30%;}
+
+#erabu #bnrAsuraku { width: 70%; max-width:1000px; display: block; border:#fff 10px double; margin: 0 auto 5em;}
+#erabu article .lines p{font-size:1.8rem;}
+header li a button.greenBtn{border-radius:10px!important;font-size:1.6rem!important;padding:10px 20px!important;}
+
+}
+
+
+
+/* 幅1000px以上
+--------------------------------------------------------*/
+@media screen and (min-width:1000px) {
+.forPC{display:block;}
+.forSP{display:none!important;}
+header ul{left:50%;max-width:1000px;margin:-25px -500px 0;}
+#xmasTop .plan .wrapBox{top:-120px;padding-top:100px;}
+main > section{margin-left:auto!important;margin-right:auto!important;}
+#xmasTop #frontCover .lines p{font-size:2.6rem;width:80%;padding:0 10%;}
+#xmasTop #frontCover .lines p b{font-size:3rem;}
+#xmasTop .description{margin-bottom:90px;}
+#xmasTop #description04 .wrapBox02 ul{margin:0;}
+#xmasTop #description04 .wrapBox02 ul li b{font-size:3rem;}
+#xmasTop #description05:after,
+#erabu #itemList:after{content:"●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●";}
+#xmasTop #plan03 #list .box table{width:94%;}
+footer{height:150px;}
+footer:before{padding-top:0;}
+footer div{position:absolute;bottom:20px;left:50%;width:100%;max-width:1000px;height:100%;margin-left:-500px;}
+footer p.copy{position:absolute;bottom:0;font-size:1.2rem;}
+#erabuList01 li{margin-bottom:25px;}
+main #erabuList02 nav{top:-7em;}
+#entryType,
+#forPrize,
+#siteNav section{max-width:800px;margin:0 auto;}
+#entryType,
+#forPrize{padding:50px 0;}
+#siteNav{padding:20px 0;}
+#prize main > section > .wrapBox{margin-left:0!important;margin-right:0!important;}
+#list .box table{width:100%;max-width:1000px;margin:0 auto;}
+#list .box table tr.lucky td{font-size:1.6rem;}
+#list .box table tr.lucky td.date{display:table-cell;float:none;width:26%;padding:1em 0 1em 2%;}
+#list .box table tr.lucky td.date time{font-size:2.7rem;}
+#list .box table tr.lucky td.item{display:table-cell;float:none;width:34%;padding:1em 1%;}
+#list .box table tr.lucky td.item b{font-size:2.2rem;}
+#list .box table tr.lucky td.no{display:table-cell;float:none;width:24%;padding:1em 1% 1em 0;}
+#list + p{max-width:1000px;margin:50px auto;}
+button.greenBtn{border-radius:20px;font-size:3.4rem;padding:25px 0!important;}
+#frontCover .lines p span button.change{font-size:2rem;padding-left:calc(12px + 2%);}
+#frontCover .lines p span button.change:before{left:12px;}
+#erabu #frontCover h1{font-size:7rem;padding:50px 0 100px;}
+#erabu #frontCover .snow{left:19%;width:20%;}
+#erabu.forMama #frontCover .snow{top:43%;left:20%;width:17%;}
+#erabu #frontCover .lines{top:-50px;right:13%;width:45%;}
+#erabu #frontCover .lines p{font-size:2.4rem;padding:30px 5% 30px 7%;}
+#erabu article .lines{width:95%;}
+/*#erabu article .lines:after{left:50%;}*/
+#erabu article .lines p{font-size:2.4rem;padding:20px 4% 20px 6%;}
+footer p.forShop{width:13%;}
+footer p.pagetop{top:-10%;width:11%;}
+#erabu{background-size:50% auto;}
+}
