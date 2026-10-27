@@ -448,15 +448,15 @@ body.xm-body {
 /* プレゼントキャンペーン：先着500名様 */
 .xm-gift1 {
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
+  grid-template-columns: .8fr 1.2fr;
   align-items: center;
-  gap: 56px;
+  gap: 44px;
   background: var(--paper);
   color: var(--ink);
   border-radius: 6px;
   --pl: 40px;
   --pr: 64px;
-  padding: 64px var(--pr) 56px var(--pl);
+  padding: 44px var(--pr) 44px var(--pl);
   margin-bottom: 40px;
   position: relative;
 }
@@ -474,7 +474,7 @@ body.xm-body {
 .xm-gift1__detail::after  { right: calc(-1 * var(--pr) - 18px); }
 .xm-gift1 .xm-gift1__label { color: var(--red); border-color: var(--red); }
 
-.xm-gift1__visual { margin: 0; }
+.xm-gift1__visual { margin: 0; max-width: 340px; justify-self: center; }
 .xm-gift1__visual img { display: block; width: 100%; height: auto; }
 
 /* キャンペーン詳細（チケットの半券部分） */
@@ -521,7 +521,7 @@ body.xm-body {
   font-size: 22px;
   color: var(--red);
   line-height: 1;
-  margin-bottom: 14px !important;
+  margin-bottom: 10px !important;
 }
 .xm-gift1__first b {
   font-family: var(--num);
@@ -533,12 +533,12 @@ body.xm-body {
 .xm-gift1__title {
   font-family: var(--maru);
   font-weight: 900;
-  font-size: 40px;
-  line-height: 1.4;
-  margin: 0 0 22px;
+  font-size: 34px;
+  line-height: 1.35;
+  margin: 0 0 14px;
   color: var(--ink);
 }
-.xm-gift1__desc { font-size: 17px; line-height: 1.95; color: var(--ink-soft); margin-bottom: 22px !important; }
+.xm-gift1__desc { font-size: 16px; line-height: 1.85; color: var(--ink-soft); margin-bottom: 16px !important; }
 .xm-gift1__desc strong { color: var(--red); font-weight: 700; }
 .xm-gift1__date {
   display: inline-flex;
@@ -938,7 +938,7 @@ body.xm-body {
   .xm-head__title { font-size: 38px; }
   .xm-gift1 { --pl: 32px; --pr: 40px; grid-template-columns: 1fr 1.4fr; gap: 32px; padding: 48px 40px 48px 32px; }
   .xm-gift1__first b { font-size: 56px; }
-  .xm-gift1__title { font-size: 32px; }
+  .xm-gift1__title { font-size: 26px; }
   .xm-gift2 { gap: 32px; }
   .xm-gift2__title { font-size: 32px; }
   .xm-items > .container { gap: 22px; }
@@ -996,18 +996,18 @@ body.xm-body {
 
   .xm-btn { min-width: 0; width: 100%; padding: 16px 20px; font-size: 16px; }
 
-  .xm-gift1 { --pl: 22px; --pr: 22px; grid-template-columns: 1fr; gap: 24px; padding: 40px 22px 30px; text-align: center; }
-  .xm-gift1__visual { width: 86%; margin: 0 auto; }
+  .xm-gift1 { --pl: 22px; --pr: 22px; grid-template-columns: 1fr; gap: 14px; padding: 28px 22px 26px; text-align: center; }
+  .xm-gift1__visual { width: 62%; margin: 0 auto; }
   .xm-gift1__detail { padding: 28px 0 0; text-align: left; }
   .xm-gift1__detail-title { font-size: 19px; text-align: center; }
   .xm-gift1__detail dl > div { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; }
   .xm-gift1__detail dt { font-size: 14px; }
   .xm-gift1__detail dd { font-size: 14px; }
   .xm-gift1__first { font-size: 18px; }
-  .xm-gift1__first b { font-size: 50px; }
-  .xm-gift1__title { font-size: 30px; }
+  .xm-gift1__first b { font-size: 46px; }
+  .xm-gift1__title { font-size: 22px; }
   .xm-gift1__desc { font-size: 15px; text-align: left; }
-  .xm-gift1__date { flex-direction: column; gap: 8px; font-size: 19px; }
+  .xm-gift1__date { flex-direction: column; gap: 6px; font-size: 18px; }
 
   .xm-gift2 { grid-template-columns: 1fr; gap: 26px; margin-top: 64px; }
   .xm-gift2__photo { margin: 0 -18px; }
