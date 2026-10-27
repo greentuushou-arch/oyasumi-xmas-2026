@@ -687,6 +687,20 @@ body.xm-body {
 .xm-rankgrid .ranking-icon { top: -22px; left: -14px; }
 .xm-rankgrid .ranking-icon img { width: 78px; border-radius: 3px; }
 
+/* PC（1024px〜）は4列。端数の最後の1枚は中央に置く（8分割グリッドで2マスずつ） */
+@media screen and (min-width: 1024px) {
+  .xm-rankgrid .slider { grid-template-columns: repeat(8, 1fr); gap: 48px 22px; }
+  .xm-rankgrid .ranking_img_box { grid-column: span 2; }
+  .xm-rankgrid .ranking_img_box:last-child:nth-child(4n+1) { grid-column: 4 / span 2; }
+  .xm-rankgrid .card-body { padding: 16px 16px 18px; }
+  .xm-rankgrid .product-name { font-size: 16px; }
+  .xm-rankgrid .card-text { font-size: 13px; }
+  .xm-rankgrid .price { font-size: 22px; }
+  .xm-rankgrid .btn { font-size: 13px; }
+  .xm-rankgrid .ranking-icon { top: -18px; left: -12px; }
+  .xm-rankgrid .ranking-icon img { width: 66px; }
+}
+
 /* ---------------------------------------------------------
    03 / 04 / 05 商品パネル（ジェネレーター出力をスタイルだけで再構成）
 --------------------------------------------------------- */
