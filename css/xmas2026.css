@@ -215,27 +215,27 @@ body.xm-body {
   line-height: 2.1;
   color: var(--ink-soft);
 }
-/* 白いイラストを、夜の窓に見立てた深緑のアーチに置く */
+/* アーチ型の窓に写真をはめる（緑の窓枠つき） */
 .xm-intro__art {
   position: relative;
+  margin: 0;
   aspect-ratio: 1 / 1.12;
   background: var(--green);
+  border: 8px solid var(--green);
   border-radius: 999px 999px 8px 8px;
   overflow: hidden;
 }
-.xm-intro__art::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle, rgba(255,255,255,.5) 1.4px, transparent 2px);
-  background-size: 46px 46px;
+.xm-intro__art picture { display: block; height: 100%; }
+#xm .xm-intro__art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 40%;
 }
-.xm-intro__tree { position: absolute; left: 6%; bottom: 6%; width: 62%; }
-.xm-intro__gift { position: absolute; right: 4%; bottom: 7%; width: 44%; }
 
 .js-reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
 .js-reveal.is-in { opacity: 1; transform: none; }
-.xm-intro__gift.js-reveal { transition-delay: .25s; }
 
 /* ギフトボックス型メニュー */
 .xm-menu { margin-top: 96px; }
