@@ -8,8 +8,8 @@
 :root {
   --red: #bf181f;
   --red-deep: #9e1118;
-  --green: #22504b;
-  --green-deep: #183c38;
+  --green: #1f7a45;
+  --green-deep: #155c33;
   --cream: #fbf4e8;
   --paper: #fffdf8;
   --gold: #c9a14a;
@@ -445,7 +445,7 @@ body.xm-body {
   margin-bottom: 18px !important;
 }
 
-/* 特典1：先着500名様 */
+/* プレゼントキャンペーン：先着500名様 */
 .xm-gift1 {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
@@ -518,15 +518,15 @@ body.xm-body {
 .xm-gift1__first {
   font-family: var(--maru);
   font-weight: 900;
-  font-size: 30px;
+  font-size: 22px;
   color: var(--red);
   line-height: 1;
-  margin-bottom: 12px !important;
+  margin-bottom: 14px !important;
 }
 .xm-gift1__first b {
   font-family: var(--num);
   font-weight: 700;
-  font-size: 104px;
+  font-size: 64px;
   letter-spacing: 0;
   margin: 0 .06em;
 }
@@ -557,7 +557,7 @@ body.xm-body {
   border-radius: 3px;
 }
 
-/* 特典2：限定ラッピング */
+/* 無料キャンペーン：限定ラッピング */
 .xm-gift2 {
   display: grid;
   grid-template-columns: 1.25fr 1fr;
@@ -923,7 +923,7 @@ body.xm-body {
   .xm-count__note { font-size: 15px; }
   .xm-head__title { font-size: 38px; }
   .xm-gift1 { --pl: 32px; --pr: 40px; grid-template-columns: 1fr 1.4fr; gap: 32px; padding: 48px 40px 48px 32px; }
-  .xm-gift1__first b { font-size: 84px; }
+  .xm-gift1__first b { font-size: 56px; }
   .xm-gift1__title { font-size: 32px; }
   .xm-gift2 { gap: 32px; }
   .xm-gift2__title { font-size: 32px; }
@@ -989,8 +989,8 @@ body.xm-body {
   .xm-gift1__detail dl > div { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; }
   .xm-gift1__detail dt { font-size: 14px; }
   .xm-gift1__detail dd { font-size: 14px; }
-  .xm-gift1__first { font-size: 22px; }
-  .xm-gift1__first b { font-size: 80px; }
+  .xm-gift1__first { font-size: 18px; }
+  .xm-gift1__first b { font-size: 50px; }
   .xm-gift1__title { font-size: 30px; }
   .xm-gift1__desc { font-size: 15px; text-align: left; }
   .xm-gift1__date { flex-direction: column; gap: 8px; font-size: 19px; }
