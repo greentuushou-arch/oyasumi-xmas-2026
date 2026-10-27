@@ -707,7 +707,6 @@ body.xm-body {
 .xm-slide-arrow--next { right: -18px; }
 .xm-slide-arrow--next::before { margin: -6px 0 0 -9px; transform: rotate(45deg); }
 .xm-slide-arrow:hover { background: var(--cream); }
-}
 
 /* ---------------------------------------------------------
    03 / 04 / 05 商品パネル（ジェネレーター出力をスタイルだけで再構成）
@@ -1004,13 +1003,16 @@ body.xm-body {
 
   .xm-btn { min-width: 0; width: 100%; padding: 16px 20px; font-size: 16px; }
 
-  .xm-gift1 { --pl: 22px; --pr: 22px; grid-template-columns: 1fr; gap: 14px; padding: 28px 22px 26px; text-align: center; }
+  .xm-gift1 { --pl: 16px; --pr: 16px; grid-template-columns: 1fr; gap: 14px; padding: 28px 16px 22px; text-align: center; }
   .xm-gift1__visual { width: 62%; margin: 0 auto; }
-  .xm-gift1__detail { padding: 28px 0 0; text-align: left; }
-  .xm-gift1__detail-title { font-size: 19px; text-align: center; }
-  .xm-gift1__detail dl > div { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; }
-  .xm-gift1__detail dt { font-size: 14px; }
-  .xm-gift1__detail dd { font-size: 14px; }
+  /* 詳細は「項目名｜内容」の横並びで高さを抑える */
+  .xm-gift1__detail { padding: 22px 0 0; text-align: left; }
+  .xm-gift1__detail-title { font-size: 17px; text-align: center; margin-bottom: 8px; }
+  .xm-gift1__detail dl > div { grid-template-columns: 5.6em 1fr; gap: 8px; padding: 9px 0; }
+  .xm-gift1__detail dt { font-size: 11.5px; line-height: 1.6; letter-spacing: 0; }
+  .xm-gift1__detail dd { font-size: 12px; line-height: 1.6; letter-spacing: 0; }
+  .xm-gift1__detail dd small { margin-top: 2px; font-size: 11px; }
+  .xm-gift1__detail li + li { margin-top: 2px; }
   .xm-gift1__first { font-size: 18px; }
   .xm-gift1__first b { font-size: 46px; }
   .xm-gift1__title { font-size: 22px; }
@@ -1045,8 +1047,10 @@ body.xm-body {
   .xm-slide-arrow--prev { left: 6px; }
   .xm-slide-arrow--next { right: 6px; }
 
-  .xm-who { margin: -8px 0 44px; gap: 8px; }
-  .xm-who a { padding: 9px 16px; font-size: 14px; }
+  /* 相手別ボタンは1行に5つ横並び */
+  .xm-who { flex-wrap: nowrap; justify-content: space-between; margin: -8px 0 40px; gap: 4px; }
+  .xm-who li { flex: 1 1 auto; }
+  .xm-who a { display: block; padding: 8px 4px; font-size: 12px; letter-spacing: 0; text-align: center; white-space: nowrap; border-width: 1.5px; }
 
   .xm-ribbon { width: 88px; margin: 56px auto 12px; }
   .xm-panel { padding: 32px 14px 24px; border-width: 3px; }
