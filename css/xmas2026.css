@@ -62,6 +62,46 @@ body.xm-body {
 .xm-fv { background: var(--red); }
 .xm-fv img { display: block; width: 100%; height: auto; }
 
+/* 看板の上の雪の結晶とキラキラ（クリックは看板へ通す） */
+.xm-fv__stage { position: relative; overflow: hidden; }
+.xm-sparkle {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.xm-flake {
+  position: absolute;
+  top: -40px;
+  width: var(--size);
+  height: var(--size);
+  color: #fff;
+  opacity: 0;
+  animation: xm-fall var(--dur) linear var(--delay) infinite;
+}
+.xm-flake svg,
+.xm-twinkle svg { display: block; width: 100%; height: 100%; }
+@keyframes xm-fall {
+  0%   { transform: translate(0, 0) rotate(0); opacity: 0; }
+  10%  { opacity: var(--alpha); }
+  50%  { transform: translate(var(--sway), 55vw) rotate(180deg); }
+  85%  { opacity: var(--alpha); }
+  100% { transform: translate(0, 110vw) rotate(360deg); opacity: 0; }
+}
+.xm-twinkle {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  color: #fff4cf;
+  opacity: 0;
+  animation: xm-twinkle var(--dur) ease-in-out var(--delay) infinite;
+}
+@keyframes xm-twinkle {
+  0%, 100% { transform: scale(.2) rotate(0); opacity: 0; }
+  45%      { transform: scale(1) rotate(45deg); opacity: 1; }
+  60%      { transform: scale(.9) rotate(60deg); opacity: .9; }
+}
+
 .xm-count {
   position: relative;
   overflow: hidden;
@@ -414,44 +454,66 @@ body.xm-body {
   background: var(--paper);
   color: var(--ink);
   border-radius: 6px;
-  padding: 64px 64px 64px 40px;
+  --pl: 40px;
+  --pr: 64px;
+  padding: 64px var(--pr) 56px var(--pl);
   margin-bottom: 40px;
   position: relative;
 }
 /* チケットの切り込み */
-.xm-gift1::before,
-.xm-gift1::after {
+.xm-gift1__detail::before,
+.xm-gift1__detail::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: -19px;
   width: 36px; height: 36px;
-  margin-top: -18px;
   border-radius: 50%;
   background: var(--green);
 }
-.xm-gift1::before { left: -18px; }
-.xm-gift1::after  { right: -18px; }
+.xm-gift1__detail::before { left: calc(-1 * var(--pl) - 18px); }
+.xm-gift1__detail::after  { right: calc(-1 * var(--pr) - 18px); }
 .xm-gift1 .xm-gift1__label { color: var(--red); border-color: var(--red); }
 
-.xm-gift1__visual {
+.xm-gift1__visual { margin: 0; }
+.xm-gift1__visual img { display: block; width: 100%; height: auto; }
+
+/* キャンペーン詳細（チケットの半券部分） */
+.xm-gift1__detail {
   position: relative;
-  aspect-ratio: 1 / .82;
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  padding: 40px 24px 0;
+  border-top: 2px dashed #e3d6c0;
 }
+.xm-gift1__detail-title {
+  font-family: var(--maru);
+  font-weight: 900;
+  font-size: 22px;
+  color: var(--green);
+  margin: 0 0 20px;
+}
+.xm-gift1__detail dl { margin: 0; }
+.xm-gift1__detail dl > div {
+  display: grid;
+  grid-template-columns: 9em 1fr;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #efe5d4;
+}
+.xm-gift1__detail dl > div:last-child { border-bottom: 0; }
+.xm-gift1__detail dt {
+  font-family: var(--maru);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--red);
+}
+.xm-gift1__detail dd { margin: 0; font-size: 15px; line-height: 1.85; color: var(--ink); }
+.xm-gift1__detail dd small { display: block; margin-top: 4px; font-size: 13px; color: var(--ink-soft); }
+.xm-gift1__detail ul { margin: 0; padding: 0; list-style: none; }
+.xm-gift1__detail li { position: relative; padding-left: 1em; }
+.xm-gift1__detail li::before { content: "・"; position: absolute; left: -.2em; }
+.xm-gift1__detail li + li { margin-top: 4px; }
 /* 今治タオルの「ドーナツ」をCSSで */
-.xm-donut {
-  --s: #c8202a;
-  position: absolute;
-  width: 62%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle, var(--paper) 0 23%, transparent 24%),
-    radial-gradient(circle, rgba(60,20,20,.22) 23%, transparent 34%, transparent 56%, rgba(60,20,20,.2) 68%, rgba(60,20,20,.32) 71%),
-    repeating-conic-gradient(from 8deg, var(--s) 0 20deg, #fbf6ee 20deg 40deg);
-}
-.xm-donut--red   { left: 0; top: 0; animation: xm-roll 9s linear infinite; }
-.xm-donut--green { --s: #1f6b4f; right: 0; bottom: 0; animation: xm-roll 11s linear infinite reverse; }
-@keyframes xm-roll { to { transform: rotate(360deg); } }
 
 .xm-gift1__first {
   font-family: var(--maru);
@@ -650,25 +712,45 @@ body.xm-body {
 }
 .xm-who a:hover { background: #fff; color: var(--red); }
 
+/* 元ページと同じ「リボン → 枠付きブロック」。リボンは見えたら揺れる */
+.xm-ribbon {
+  display: block;
+  width: 130px;
+  margin: 80px auto 18px;
+  transform-origin: 50% 0;
+}
+.xm-who + .anchor + .xm-ribbon { margin-top: 0; }
+.xm-head + .xm-ribbon { margin-top: 0; }
+.xm-ribbon.js-reveal { opacity: 1; transform: none; transition: none; }
+.xm-ribbon.is-in {
+  animation:
+    xm-swing 1.2s ease both,
+    xm-sway 3.6s ease-in-out 1.2s infinite;
+}
+@keyframes xm-swing {
+  20%  { transform: rotate(15deg); }
+  40%  { transform: rotate(-10deg); }
+  60%  { transform: rotate(5deg); }
+  80%  { transform: rotate(-5deg); }
+  100% { transform: rotate(0); }
+}
+@keyframes xm-sway {
+  0%, 100% { transform: rotate(0); }
+  25%      { transform: rotate(4deg); }
+  75%      { transform: rotate(-4deg); }
+}
+
 .xm-panel {
-  --line: var(--gold);
+  --line: #cd9f16;
   position: relative;
   background: var(--paper);
   color: var(--ink);
-  border-radius: 6px;
+  border: 5px solid var(--line);
+  border-radius: 4px;
   padding: 56px 48px 56px;
-  margin-top: 70px;
-  border-top: 8px solid var(--line);
 }
 .xm-panel--green { --line: #6a8f08; }
-.xm-panel--red   { --line: var(--red); }
-.xm-panel__ribbon {
-  position: absolute;
-  top: -8px;
-  left: 50%;
-  width: 120px;
-  transform: translateX(-50%);
-}
+.xm-panel--red   { --line: #c93232; }
 .xm-panel__head {
   display: block;
   width: 42%;
@@ -840,7 +922,7 @@ body.xm-body {
   .xm-count__num span { font-size: 88px; }
   .xm-count__note { font-size: 15px; }
   .xm-head__title { font-size: 38px; }
-  .xm-gift1 { grid-template-columns: 1fr 1.4fr; gap: 32px; padding: 48px 40px 48px 32px; }
+  .xm-gift1 { --pl: 32px; --pr: 40px; grid-template-columns: 1fr 1.4fr; gap: 32px; padding: 48px 40px 48px 32px; }
   .xm-gift1__first b { font-size: 84px; }
   .xm-gift1__title { font-size: 32px; }
   .xm-gift2 { gap: 32px; }
@@ -900,8 +982,13 @@ body.xm-body {
 
   .xm-btn { min-width: 0; width: 100%; padding: 16px 20px; font-size: 16px; }
 
-  .xm-gift1 { grid-template-columns: 1fr; gap: 24px; padding: 40px 24px 36px; text-align: center; }
-  .xm-gift1__visual { width: 70%; margin: 0 auto; }
+  .xm-gift1 { --pl: 22px; --pr: 22px; grid-template-columns: 1fr; gap: 24px; padding: 40px 22px 30px; text-align: center; }
+  .xm-gift1__visual { width: 86%; margin: 0 auto; }
+  .xm-gift1__detail { padding: 28px 0 0; text-align: left; }
+  .xm-gift1__detail-title { font-size: 19px; text-align: center; }
+  .xm-gift1__detail dl > div { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; }
+  .xm-gift1__detail dt { font-size: 14px; }
+  .xm-gift1__detail dd { font-size: 14px; }
   .xm-gift1__first { font-size: 22px; }
   .xm-gift1__first b { font-size: 80px; }
   .xm-gift1__title { font-size: 30px; }
@@ -938,8 +1025,8 @@ body.xm-body {
   .xm-who { margin: -8px 0 44px; gap: 8px; }
   .xm-who a { padding: 9px 16px; font-size: 14px; }
 
-  .xm-panel { padding: 40px 16px 28px; margin-top: 52px; }
-  .xm-panel__ribbon { width: 84px; }
+  .xm-ribbon { width: 88px; margin: 56px auto 12px; }
+  .xm-panel { padding: 32px 14px 24px; border-width: 3px; }
   .xm-panel__head, .xm-panel__head--wide { width: 92%; margin-bottom: 24px; }
 
   /* SPは「写真左・情報右」の横並びで、3商品をひと目で */
@@ -971,6 +1058,7 @@ body.xm-body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .xm-count::before, .xm-donut { animation: none; }
+  .xm-count::before, .xm-ribbon.is-in { animation: none; }
+  .xm-sparkle { display: none; }
   .js-reveal { opacity: 1; transform: none; transition: none; }
 }
